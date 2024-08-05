@@ -1,0 +1,189 @@
+.buttom-page-section{
+    background-color: black;
+    display: flex;
+    height: 135px;
+    padding: 25px;
+    color: white;
+    width: 100%;
+    margin-left: -18px;
+    margin-bottom: -20px;
+    padding-right: 10px;
+    margin-top: 150px;
+
+}
+
+.buttom-page-section a{
+    text-decoration: none;
+}
+
+
+.about-us{
+    width: 70%;
+    text-align: center;
+}
+
+.about-us .about-us-title{
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 15px;
+  
+}
+
+.about-us-information{
+    width: 25%;
+    margin-left: 15px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.container1{
+    display: flex;
+}
+
+.meet-the-team{
+    background-color: #fdbf04;
+    padding: 5px;
+    border-radius: 15px;
+    color: black;
+    margin-bottom:18px;
+    cursor: pointer;
+}
+
+.meet-the-team:hover{
+    background-color: #dca80c;
+}
+
+
+.icon-img img{
+    width: 25px;
+    object-fit: contain;
+    object-position: center;
+    margin-right: 15px;
+    z-index: 1;
+    transition: width .3s;
+}
+
+.icon-img img:hover{
+    cursor: pointer;
+    width: 35px;
+}
+
+.email{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    margin-left: -5px;
+}
+
+@media (max-width: 768px) {
+    .buttom-page-section{
+        width: 768px;
+    }
+    .about-us-message{
+        width: 90%;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 430px) {
+    .buttom-page-section {
+        width: 100vw;
+        font-size: 0.65rem;
+        display: block;
+
+    }
+    
+    .buttom-page-section .icon-img img {
+        width: 15px !important;
+        padding: 0;
+        margin: 0px;
+    }
+
+    .buttom-page-section .about-us-message{
+        width: 90%;
+    }
+
+    .buttom-page-section .about-us-information{
+        margin-left: -1px !important;
+    }
+
+    .icon-img{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .about-us {
+        display: block; /* Ensure it is displayed */
+    }
+    .about-us-message {
+        width: 90% !important;
+    }
+}
+
+@media (min-width: 375px) and (max-width:376px){
+    .buttom-page-section {
+        width: 100vw;
+        font-size: 0.65rem;
+        display: block;
+
+    }
+    
+    .buttom-page-section .icon-img img {
+        width: 15px !important;
+        padding: 0;
+        margin: 0px;
+    }
+
+    .buttom-page-section .about-us-message{
+        width: 90%;
+    }
+
+    .buttom-page-section .about-us-information{
+        margin-left: -1px !important;
+    }
+
+    .icon-img{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .about-us {
+        display: block; /* Ensure it is displayed */
+    }
+    .about-us-message {
+        width: 90% !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width:321px){
+    .buttom-page-section {
+        width: 100vw;
+        font-size: 0.65rem;
+        display: block;
+
+    }
+    
+    .buttom-page-section .icon-img img {
+        width: 15px !important;
+        padding: 0;
+        margin: 0px;
+    }
+
+    .buttom-page-section .about-us-message{
+        width: 90%;
+    }
+
+    .buttom-page-section .about-us-information{
+        margin-left: -1px !important;
+    }
+
+    .icon-img{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .about-us {
+        display: block; /* Ensure it is displayed */
+    }
+    .about-us-message {
+        width: 90% !important;
+    }
+}

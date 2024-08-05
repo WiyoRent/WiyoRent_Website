@@ -1,0 +1,147 @@
+
+
+.welcome-page {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background, .foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+}
+
+.background {
+    background-image: url(https://rcb.rw/IMG/logo/arton11.jpg?1586601110);
+}
+
+.foreground {
+    background-image: url(/logo\ image/Brand_Ambassor_laptop_image_crop.jpg);
+    mask-image: linear-gradient(var(--direction), rgba(0,0,0,1) 40%, rgba(0,0,0,0) 60%);
+    mask-position: 10% 10%;
+    object-fit: contain;
+    object-position: left;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+}
+
+.content h1 {
+    font-size: 4.5rem;
+    /* color: hsl(39, 100%, 50%); */
+    color: white;
+    font-weight: bold; /* Make text bolder */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.content p {
+   font-size: 1.4rem;
+    /* color: hsl(39, 100%, 50%);; */
+    color: white;
+    margin-top: -80px;
+    width: 80%;   
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.content h1, .content p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+@media (min-width:710px) and (max-width:768px) {
+    .navigation{
+        position: fixed;
+    }
+
+    .welcome-page{
+        width: 768px;
+    }
+    html, body, .main-page{
+        width: 100vw
+    }
+}
+
+@media (min-width: 425px)  and (max-width:430px){
+
+.welcome-page{
+    width: 100vw 
+}
+
+.content{
+    margin-top: -25px;
+}
+
+.welcome-page p{
+    font-size: 1.1rem !important;
+    margin-top: 0.1px;
+}
+
+.welcome-page h1{
+    font-size: 1.7rem;
+    margin-bottom: -30px;   
+}
+
+.background, .foreground {
+    background-size: contain; /* Ensure the background and foreground fit within the container */
+}
+}
+
+
+@media (min-width: 375px) and (max-width:376px){
+    .welcome-page{
+        width: 100vw 
+    }
+    .welcome-page p{
+        font-size: 1.1rem !important;
+        margin-top: 0.1px;
+    }
+    .welcome-page h1{
+        font-size: 1.7rem;
+        margin-bottom: -30px;   
+    }
+    .content{
+        margin-bottom: -55px;
+    }
+}
+
+@media (min-width: 320px) and (max-width:321px){
+    .welcome-page{
+        width: 100vw 
+    }
+    .welcome-page p{
+        font-size: 1.1rem !important;
+        margin-top: 0.1px;
+    }
+    .welcome-page h1{
+        font-size: 1.7rem;
+        margin-bottom: -30px;   
+    }
+    .content{
+        margin-bottom: -55px;
+        margin-top: 320px;
+    }
+
+    .entry-message {
+        font-size: 1.1rem !important;
+    
+    }
+
+}
