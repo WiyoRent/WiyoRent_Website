@@ -34,7 +34,7 @@ html{
     order: 1;
 }
 
-#contact-message{
+#contact-message, #roommate-Message{
     font-family: 'Oswald', sans-serif;
     font-size: 0.8rem;
 }
