@@ -5,11 +5,6 @@ body {
     overflow-x: hidden;
 }
 
-#contact-message{
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.8rem;
-}
-
 html{
     padding: 0;
 }
@@ -37,6 +32,11 @@ html{
 
 .tabSection{
     order: 1;
+}
+
+#contact-message{
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
 }
 
 @media (min-width:728px) {
