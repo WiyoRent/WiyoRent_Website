@@ -5,6 +5,11 @@ body {
     overflow-x: hidden;
 }
 
+#contact-message{
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+}
+
 html{
     padding: 0;
 }
