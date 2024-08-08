@@ -120,13 +120,11 @@ html{
         font-size: 1.5rem !important;
     }
 
-
-
      .tabSection.tabSection{
         grid-column: 1 / span 2; /* Span across both columns */
         grid-row: 2; /* Place in the second row */
         margin-left: 0px;
-        margin-top: -40px;
+        margin-top: -24px;
         width: 100%;
     }
 
