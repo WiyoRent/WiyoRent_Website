@@ -125,7 +125,7 @@ html{
         grid-column: 1 / span 2; /* Span across both columns */
         grid-row: 2; /* Place in the second row */
         margin-left: 0px;
-        margin-top: -24px;
+        margin-top: -20px;
         width: 100%;
     }
 
