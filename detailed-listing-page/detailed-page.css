@@ -1,7 +1,8 @@
 body {
     height: fit-content;
     box-sizing: border-box;
-     font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    overflow-y: hidden;
 }
 
 html{
