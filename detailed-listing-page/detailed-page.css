@@ -1,91 +1,11 @@
-/* Detalied nav-bar */
-
-.logo{
-    background-color: black;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    padding: 0px;
-    border-bottom: 1px solid;
-    z-index: 30;
-    align-items: center;
-}
-
-.logo img{
-    width: 80px; 
-    margin-left: 60px;  
-}
-
-.logo .view-favorites{
-    background-color: transparent;
-    position: relative;
-    transition: box-shadow .5s;
-    border: none;
-    margin-right: 10px !important;
-    border-radius: 5px;
-    transition: background-color 1s;
-}
-
-.logo .view-favorites:hover{
-    cursor: pointer;
-    background-color: #dca80b;
-    border: 1px solid black transparent;
-}
-
-.logo .view-favorites .favourite-counter{
-    position: absolute;
-    right: 5px;
-    top: 18px;
-    font-weight: bold;
-    color: white;
-}
-
-.logo .view-favorites .favourite-tooltip{
-    z-index: 5;
-    background-color: black;
-    color: white;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding: 5px;
-    border-radius: 5px;
-    position: absolute;
-    top: 90%;
-    right:0px;
-    margin-right: -5px;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.logo .view-favorites .favourite-tooltip:after{
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: 0px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent;
-    z-index: 20;
-}
-
-.logo .view-favorites:hover .favourite-tooltip{
-    opacity: 1;
-}
-
-
-/* Detailed home section and Image Container */
-
 body {
     height: fit-content;
-    padding: 10px;
     box-sizing: border-box;
      font-family: 'Oswald', sans-serif;
+}
+
+html{
+    padding: 0;
 }
 
 .detailed-page {
@@ -95,481 +15,134 @@ body {
 
 .detailed-home-grid {
     display: grid;
-    grid-template-columns: 1fr 400px;
-    column-gap: 55px;
-    height: 100%;
-
-}
-
-.home-section {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
     height: fit-content;
-    margin-top: 1px;
-    padding: 0px;
-    box-shadow: 0px 0px 3px;
-    overflow: hidden;
-    
-}
-
-.home-section .js-detailed-image-container {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.home-section .js-detailed-image-container img {
-    display: none;
-    width: 850px !important;
-    height: 400px;
-    object-fit: contain;
-}
-
-.home-section .js-detailed-image-container {
-    position: relative;
-}
-
-.home-section .js-detailed-image-container button {
-    background-color: hsla(0, 1%, 22%, 0.765);
-    border: none;
-    position: absolute;
-    z-index: 1;
-    transform: translateY(-50%);
-    top: 50%;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.home-section .left-button {
-    margin-left: 10px;
-    left: 0;
-}
-
-.home-section .left-button:hover {
-    background-color: #edb508;
-    
-}
-
-.home-section .right-button {
-    right: 0;
-    margin-right: 10px;
-}
-
-.home-section .right-button:hover {
-    background-color: #edb508;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-
-.js-detailed-image-container img.DisplayImage {
-    display: block;
-    animation-name: fade;
-    animation-duration: 2s;
-}
-
-@keyframes fade{
-    from {opacity: .65}
-    to {opacity: 1}
-}
-
-
-/* Listing Details section  */
-
-.Listing-Details {
-    height: 590px;
-    position: sticky;
-    top: 90px;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    padding: 10px;
-    margin: 0;
-    color: black;
-    overflow: auto;
-    overflow-x: hidden; 
-    box-shadow: 0px 0px 2px;
-    margin-right: 20px;
-    padding-top: 0px;
-    z-index: 10;
-    padding-right: 20px;
-
-
-
-}
-
-
-.Listing-Details h2 {
-    padding-top: 0px;
-    margin-top: 10px;
-}
-
-.Listing-title {
-    display: flex;
     justify-content: space-evenly;
-    position: relative;
-    width: 90%;
 }
 
-.Listing-title button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: -50px;
-    background-color: hsl(51, 100%, 50%);
-    margin-left: 10px;
+.home-section{
+    order: 0;
 }
 
-.add-to-favourite {
-    height: 45px;
-    position: absolute;
-    right: 0;
-    top: 25%;
-    margin-top: -10px;
-
-    border: none;
-    cursor: pointer;
-    margin-right: 150px;
-    z-index: 20;
-    border-radius: 10px;
+.Listing-Details{
+    order: 2;
 }
 
-
-
-.add-to-favourite .tooltip {
-    visibility: hidden;
-    width: 140px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-
-    /* Position the tooltip */
-    position: absolute;
-    left: 5%;
-    margin-left: -90px;
-    top: 128%;
-
-    /* Fade in tooltip */
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 30; /* Highest z-index for the tooltip */
-}
-
-.add-to-favourite .tooltip::after {
-    content: "";
-    position: absolute;
-    bottom: 100%; /* At the bottom of the tooltip */
-    left: 75%;
-    margin-left: 0px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-    z-index: 30; /* Highest z-index for the arrow */
-}
-
-.add-to-favourite:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-}
-
-
-.Price-Details {
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 1.2rem;
-    padding: 0;
-    margin-top: -10px;
-}
-
-.House-Price, .Commision, .total, .Security-Deposit, .Booking-Fee, .minimum_stay{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: -20px;
-    height: 70px;
-}
-
-.Security-Deposit, .Booking-Fee{
-    font-size: 15px;
-    margin-top: -10px;
-}
-
-.Booking-Fee{
-    margin-top: -40px;
-}
-
-.Security-Deposit h4, .Booking-Fee h4{
-    font-style: normal;
-    font-weight: normal;
-}
-
-.Service_fee_info{
-    font-size: 12px;
-    font-weight: bold;
-    margin-top: 25px;
-}
-
-.minimum_stay{
-    font-size: 12px;
-    font-weight: bold;
-    border-bottom: 1px solid grey;
-    margin-top: -20px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    height: max-content;
-    
-}
-
-.Commision, .total {
-    margin-top: -10px;
-}
-
-.total{
-    border-bottom: 1px solid grey;
-}
-
-.Listing-Details textarea {
-    width: 100%;
-    font-size: large;
-    margin-top: 35px;
-    height: 55px;
-}
-
-textarea:focus {
-    outline: none;
-}
-
-.dropdown-content {
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width: 80%;
-    margin-top: -25px;
-    margin-left: 10%;
-    left: 0;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 1.3s ease, box-shadow 0.5s ease; /* Transitions added here */
-}
-
-.contact-us-container:hover .dropdown-content {
-    max-height: 200px; /* Adjust to match the maximum height you want to expand */
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: 1s;
-}
-
-.dropdown-content a:hover {
-    background-color: #fdbf04;
-}
-
-.dropdown-content a img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-.Our-contact {
-    text-align: center;
-}
-
-.Our-contact .contact-us-container {
-    border-radius: 20px;
-    transition: box-shadow 1s ease; /* Smooth transition for box-shadow */
-}
-
-.Our-contact .contact-us-container:hover {
-    box-shadow: 5px 5px 5px /* rgba(0, 0, 0, 0.3); /* Adjust shadow effect on hover */
-}
-
-.Our-contact .contact-us-container .contact-us-text {
-    background-color: hsl(51, 100%, 50%);
-    padding: 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    color: black;
-}
-
-.roommate-container {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: height 0.3s ease;
-    cursor: pointer;
-    background-color: #fdbf04;
-    transition: 1s;
-}
-
-.roommate-container:hover {
-    box-shadow: 5px 5px 5px;
-}
-
-.find-a-roommate {
-    padding: 10px;
-    background-color: hsl(51, 100%, 50%);
-    text-align: center;
-    color: black;
-}
-
-.roommate-message {
-    overflow: hidden;
-    max-height: 0;
-    padding: 10px;
-    margin-top: -25px;
-    transition: max-height 2s ease; /* Transition max-height property over 1 second */
-}
-
-.roommate-message.open {
-    max-height: 210px; /* Adjust to match the maximum height you want to expand to */
-}
-
-.roommate-message textarea {
-    width: 100%;
-    height: 70px;
-}
-
-.share-options {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.share-options button {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.share-options i {
-    margin-right: 5px;
-}
-
-#share-whatsapp {
-    background-color: #25d366;
-    color: white;
-    transition: 1s;
-}
-
-#share-whatsapp:hover {
-    background-color: #118c3e;
-}
-
-#share-email {
-    background-color: #0073e6;
-    color: white;
-    transition: 1s;
-}
-
-#share-email:hover {
-    background-color: #0556a8;
-}
-
-
-/* Listing Menu and overview */
-.tabSection {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #fff;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 8px;
-    padding: 0px;
-    height: auto;
-    border-top-width: none;
-    border-left: 0px;
-
-    margin-top: -150px;
-
-
-}
-
-.tabSection input[type="radio"] {
-    display: none;
-}
-
-.tabSection label {
-    background-color: hsl(51, 100%, 50%);
-    padding: 10px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    font-size: larger;
-    font-weight: bold;
-    color:  black;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-bottom: none;
-    margin-right: 5px;
-}
-
-.tabSection label:hover {
-    background-color: #fdbf04;
-}
-
-.tabSection .tab-content {
-    background-color: white;
-    margin-top: -1px;
-    padding: 20px;
+.tabSection{
     order: 1;
-    display: none;
-    width: 70%;
-    border: 1px solid black;
-    border-top: 1px solid;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
 }
 
-.tabSection input[type="radio"]:checked + label {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    border-bottom-width: 0;
-    z-index: 1;
+@media (min-width:728px) {
+    .detailed-home-grid {
+        display: grid;
+        grid-template-rows: 1fr 800px;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+        height: fit-content;
+    }
+
+    .home-section {
+        grid-column: 1 / span 2; /* Span across both columns */
+        grid-row: 1; /* Occupy the top row */
+      }
+      
+      .tabSection {
+        grid-column: 2; /* Occupy the left column */
+        grid-row: 2; /* Occupy the bottom row */
+        margin: 0 auto;
+      }
+      
+      .Listing-Details {
+        grid-column: 1; /* Occupy the right column */
+        grid-row: 2; /* Occupy the bottom row */
+        margin: 0 auto;
+      }
 }
 
-.tabSection input[type="radio"]:checked + label + .tab-content {
-    display: block;
+@media (min-width:992px) {
+    .detailed-home-grid {
+        display: grid;
+        grid-template-rows: 1fr 800px;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+        height: fit-content;
+        justify-content: center;
+
+    }
+
+    .home-section {
+        grid-column: 1 / span 2; /* Span across both columns */
+        grid-row: 1; /* Occupy the top row */
+      }
+      
+      .tabSection {
+        grid-column: 2; /* Occupy the left column */
+        grid-row: 2; /* Occupy the bottom row */
+        margin: 0 auto;
+      }
+      
+      .Listing-Details {
+        grid-column: 1; /* Occupy the right column */
+        grid-row: 2; /* Occupy the bottom row */
+        margin: 0 auto;
+
+      }
 }
 
-.property-card, .overview-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 400px;
-    font-family: Oswald, sans-serif;
+@media (min-width:1200px){
+    .detailed-home-grid{
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .home-section{
+        grid-column: 1;
+        grid-row: 1;
+        background-color: black !important;
+    }
+
+    .js-detailed-image-container{
+        width: 65vw !important;
+    }
+
+    .Listing-Details{
+        grid-column: 2; /* Place in the second column */
+        grid-row: 1; /* Place in the first row */
+        margin: 5px auto !important;
+        overflow-y: auto !important;
+        overflow-x: hidden;
+        height: 530px !important;
+    }
+
+    .Listing-Details h4.Listing-Details h4{
+        font-size: 1.5rem !important;
+    }
+
+
+
+     .tabSection.tabSection{
+        grid-column: 1 / span 2; /* Span across both columns */
+        grid-row: 2; /* Place in the second row */
+        margin-left: 0px;
+        margin-top: -40px;
+        width: 100%;
+    }
+
+    .property-card.property-card{
+        width: 100%;
+    }
+
+    .user-message{
+        margin-top: -15px;
+    }
+
+
 }
 
-.property-card .row,
-.overview-card .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgb(74, 73, 73);
-}
-.property-card .row:last-child,
-.overview-card .row:last-child {
-    margin-bottom: 0;
-}
-.property-card .label,
-.overview-card .label {
-    font-weight: bold;
-    color: #333;
-}
-.property-card .value,
-.overview-card .value {
-    font-weight: bold;
-    color: #666;
-}
+
+
 
 
 
