@@ -1,4 +1,4 @@
-export const main_Listings= [
+export const main_Listings= [ 
     
     {
         id:"1",
