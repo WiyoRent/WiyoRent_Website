@@ -107,6 +107,60 @@ export const main_Listings= [
                             Extra_Services: 'NONE'
                         }
     },
+    {   
+        id:"10",
+        houseImg:{
+                    Outdoor:[
+                        "/home images/House 10/OutdoorView.jpg"
+                    ],
+                    LivingRoom: [
+                        "/home images/House 10/LivingRoom.jpg" 
+                    ],
+                    Kitchen: [
+                        "/home images/House 10/Kitchen.jpg"
+                    ],
+                    Bedroom: [
+                        "/home images/House 10/Bedroom1.jpg",
+                        "/home images/House 10/Bedroom2.jpg",
+                    ],
+                    Bathroom:[
+                        "/home images/House 10/Bathroom1.jpg"
+                    ]  
+                },
+
+        house_overview: {
+                            house_name: '3-Bedroom Studio For Rent In Zindiro',
+                            house_price: 200000,
+                            house_commission: 10,
+                            status: 'Available',
+                            bedrooms:3,
+                            bathrooms:3,
+                            distance:10,
+                            property_type:'Apartment',
+                            advert_type: 'Normal',
+                            security_deposit: 500000,
+                            security_deposit_status: 'Required',
+                            minimun_stay_period: 2,
+                            booking_fee: 250000
+                        },
+        house_amenities:{
+                            Furnished:'YES',
+                            Electricity_Included:'NO',
+                            Water_Included:'NO',
+                            WIFI_Included:'YES',
+                            Water_Heater: 'YES',
+                            Microwave: 'YES',
+                            Blender: 'YES',
+                            Oven: 'YES',
+                            Kitchen_Utensils: 'YES',
+                            Cooking_Utensils: 'YES',
+                            TV: 'YES',
+                            Fan: 'NO',
+                            Security: 'YES',
+                            Washing_Machine: 'NO',
+                            Extra_Services: 'NONE'
+                        }
+    },
     {
         id:"3",
         houseImg:{
@@ -158,60 +212,6 @@ export const main_Listings= [
                             Fan: 'NO',
                             Security: 'YES',
                             Washing_Machine: 'NONE',
-                            Extra_Services: 'NONE'
-                        }
-    },
-    {   
-        id:"4",
-        houseImg:{
-                    Outdoor:[
-                        "/home images/House 4/OutdoorView.jpg"
-                    ],
-                    LivingRoom: [
-                        "/home images/House 4/LivingRoom.jpg",
-                        "/home images/House 4/LivingRoom1.jpg" 
-                    ],
-                    Kitchen: [
-                        "/home images/House 4/Bedroom1.jpg"
-                    ],
-                    Bedroom: [
-                        "/home images/House 4/Bedroom1.jpg"
-                    ],
-                    Bathroom:[
-                        "/home images/House 4/Bathroom1.jpg"
-                    ]  
-                },
-
-        house_overview: {
-                            house_name: '2-Bedroom House For Rent In Masoro',
-                            house_price: 250000,
-                            house_commission: 10,
-                            status: 'Available',
-                            bedrooms:2,
-                            bathrooms:2,
-                            distance:8,
-                            property_type:'House',
-                            advert_type: 'Featured',
-                            security_deposit: 250000,
-                            security_deposit_status: 'Required',
-                            minimun_stay_period: 2,
-                            booking_fee: 250000,
-                        },
-        house_amenities:{
-                            Furnished:'YES',
-                            Electricity_Included:'NO',
-                            Water_Included:'YES',
-                            WIFI_Included:'YES',
-                            Water_Heater: 'YES',
-                            Microwave: '-',
-                            Blender: 'NO',
-                            Oven: 'YES',
-                            Kitchen_Utensils: 'YES',
-                            Cooking_Utensils: 'YES',
-                            TV: 'YES',
-                            Fan: 'NO',
-                            Security: 'YES',
-                            Washing_Machine: 'NO',
                             Extra_Services: 'NONE'
                         }
     },
@@ -441,6 +441,60 @@ export const main_Listings= [
                         }
     },
     {   
+        id:"4",
+        houseImg:{
+                    Outdoor:[
+                        "/home images/House 4/OutdoorView.jpg"
+                    ],
+                    LivingRoom: [
+                        "/home images/House 4/LivingRoom.jpg",
+                        "/home images/House 4/LivingRoom1.jpg" 
+                    ],
+                    Kitchen: [
+                        "/home images/House 4/Bedroom1.jpg"
+                    ],
+                    Bedroom: [
+                        "/home images/House 4/Bedroom1.jpg"
+                    ],
+                    Bathroom:[
+                        "/home images/House 4/Bathroom1.jpg"
+                    ]  
+                },
+
+        house_overview: {
+                            house_name: '2-Bedroom House For Rent In Masoro',
+                            house_price: 250000,
+                            house_commission: 10,
+                            status: 'Unavailable',
+                            bedrooms:2,
+                            bathrooms:2,
+                            distance:8,
+                            property_type:'House',
+                            advert_type: 'Featured',
+                            security_deposit: 250000,
+                            security_deposit_status: 'Required',
+                            minimun_stay_period: 2,
+                            booking_fee: 250000,
+                        },
+        house_amenities:{
+                            Furnished:'YES',
+                            Electricity_Included:'NO',
+                            Water_Included:'YES',
+                            WIFI_Included:'YES',
+                            Water_Heater: 'YES',
+                            Microwave: '-',
+                            Blender: 'NO',
+                            Oven: 'YES',
+                            Kitchen_Utensils: 'YES',
+                            Cooking_Utensils: 'YES',
+                            TV: 'YES',
+                            Fan: 'NO',
+                            Security: 'YES',
+                            Washing_Machine: 'NO',
+                            Extra_Services: 'NONE'
+                        }
+    },
+    {   
         id:"8",
         houseImg:{
                     Outdoor:[
@@ -492,5 +546,5 @@ export const main_Listings= [
                             Washing_Machine: 'NO',
                             Extra_Services: 'Bi-Weekly Cleaning'
                         }
-    }
+    },
 ]
