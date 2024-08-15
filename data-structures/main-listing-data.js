@@ -493,7 +493,7 @@ export const main_Listings= [
                             Washing_Machine: 'NO',
                             Extra_Services: 'NONE'
                         }
-    },
+    }, 
     {   
         id:"8",
         houseImg:{
