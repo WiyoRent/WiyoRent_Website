@@ -19,202 +19,206 @@
 
 </head>
 <body>
-    <div class="logo">
-        <div id="wiyorentLogo">
-            <a href="/index.html#featured-section">
-                <img src="/logo image/WiyoRent logo.jpg" alt="">
-            </a>
-        </div>
-        
-        <div>
-            <a href="/add-to-favourite/add-to-favourite.html">
-                <button class="view-favorites">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="M200-120v-656.67q0-27 19.83-46.83 19.84-19.83 46.84-19.83h426.66q27 0 46.84 19.83Q760-803.67 760-776.67V-120L480-240 200-120Zm66.67-101.33L480-312l213.33 90.67v-555.34H266.67v555.34Zm0-555.34h426.66-426.66Z"/></svg>
-                </button>
-            </a>
-        </div>
-    </div>
-    <div class="detailed-page">
-        <div class="detailed-home-grid js-detailed-home-grid">
-            <div class="home-section">
-                <div class="js-detailed-image-container">
-                    <!-- Images will be dynamically added here -->
-                    <button class="left-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="M561-240 320-481l241-241 43 43-198 198 198 198-43 43Z"/></svg>
-                    </button>
-                    <button class="right-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="M530-481 332-679l43-43 241 241-241 241-43-43 198-198Z"/></svg> 
-                    </button>
-                </div>
+    <nav>
+        <div class="logo">
+            <div id="wiyorentLogo">
+                <a href="/index.html#featured-section">
+                    <img src="/logo image/WiyoRent logo.jpg" alt="">
+                </a>
             </div>
-            <div class="Listing-Details">
-                <div class="Listing-title">
-                    <h2 id="house-name"></h2>
-                    <div class="faveBtn">
+    
+            <div>
+                <a href="/add-to-favourite/add-to-favourite.html">
+                    <button class="view-favorites">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="M200-120v-656.67q0-27 19.83-46.83 19.84-19.83 46.84-19.83h426.66q27 0 46.84 19.83Q760-803.67 760-776.67V-120L480-240 200-120Zm66.67-101.33L480-312l213.33 90.67v-555.34H266.67v555.34Zm0-555.34h426.66-426.66Z"/></svg>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="detailed-page">
+            <div class="detailed-home-grid js-detailed-home-grid">
+                <div class="home-section">
+                    <div class="js-detailed-image-container">
+                        <!-- Images will be dynamically added here -->
+                        <button class="left-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="M561-240 320-481l241-241 43 43-198 198 198 198-43 43Z"/></svg>
+                        </button>
+                        <button class="right-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="M530-481 332-679l43-43 241 241-241 241-43-43 198-198Z"/></svg> 
+                        </button>
                     </div>
                 </div>
-                <div class="Price-Details">
-                    <div class="House-Price">
-                        <p>Price:</p>
-                        <h4 id="house-price"></h4>
+                <div class="Listing-Details">
+                    <div class="Listing-title">
+                        <h2 id="house-name"></h2>
+                        <div class="faveBtn">
+                        </div>
                     </div>
-                    <div class="Commision">
-                        <p>Commission:</p>
-                        <h4 id="house-commission"></h4>
-                    </div>
-                    <div class="total">
-                        <p>Total Price:</p>
-                        <h4 id="total-price"></h4>
-                    </div>
-                    <div class="Service_fee_info">
-                        <p>*Service fee is a one-time percentage of the first payment.*</p>
-                    </div>
-                    <div class="minimum_stay">
-                        <p>*The first payment should cover at least:*</p>
-                        <h4></h4>
-                    </div>
-                    <div class="Security-Deposit">
-                    </div>
-                    <div class="Booking-Fee">
-                        
-                    </div>
+                    <div class="Price-Details">
+                        <div class="House-Price">
+                            <p>Price:</p>
+                            <h4 id="house-price"></h4>
+                        </div>
+                        <div class="Commision">
+                            <p>Commission:</p>
+                            <h4 id="house-commission"></h4>
+                        </div>
+                        <div class="total">
+                            <p>Total Price:</p>
+                            <h4 id="total-price"></h4>
+                        </div>
+                        <div class="Service_fee_info">
+                            <p>*Service fee is a one-time percentage of the first payment.*</p>
+                        </div>
+                        <div class="minimum_stay">
+                            <p>*The first payment should cover at least:*</p>
+                            <h4></h4>
+                        </div>
+                        <div class="Security-Deposit">
+                        </div>
+                        <div class="Booking-Fee">
+                            
+                        </div>
 
-                </div>
-                <div class="user-message">
-                    <textarea id="contact-message" class="message"></textarea>
-                </div>
-                <div class="Our-contact">
-                    <div class="contact-us-container">
-                        <h2 class="contact-us-text">Contact Us</h2>
-                        <div class="dropdown-content">
-                            <a href="#" onclick="contactViaWhatsApp()">
-                                <img src="/icons/whatsapp-icon.png" alt="WhatsApp"> Contact via WhatsApp
-                            </a>
-                            <a href="#" onclick="contactViaEmail()">
-                                <img src="/icons/email-icon.png" alt="Email"> Contact via Email
-                            </a>
+                    </div>
+                    <div class="user-message">
+                        <textarea id="contact-message" class="message"></textarea>
+                    </div>
+                    <div class="Our-contact">
+                        <div class="contact-us-container">
+                            <h2 class="contact-us-text">Contact Us</h2>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="contactViaWhatsApp()">
+                                    <img src="/icons/whatsapp-icon.png" alt="WhatsApp"> Contact via WhatsApp
+                                </a>
+                                <a href="#" onclick="contactViaEmail()">
+                                    <img src="/icons/email-icon.png" alt="Email"> Contact via Email
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="roommate-container">
+                        <div class="find-a-roommate">
+                            <h2>Find A Roommate</h2>
+                        </div>
+                        <div class="roommate-message">
+                            <textarea id="roommate-Message"></textarea>
+                            <div class="share-options">
+                                <button id="share-whatsapp">
+                                    <i class="fab fa-whatsapp"></i> Share on WhatsApp
+                                </button>
+                                <button id="share-email">
+                                    <i class="fas fa-envelope"></i> Share via Email
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="roommate-container">
-                    <div class="find-a-roommate">
-                        <h2>Find A Roommate</h2>
-                    </div>
-                    <div class="roommate-message">
-                        <textarea id="roommate-Message"></textarea>
-                        <div class="share-options">
-                            <button id="share-whatsapp">
-                                <i class="fab fa-whatsapp"></i> Share on WhatsApp
-                            </button>
-                            <button id="share-email">
-                                <i class="fas fa-envelope"></i> Share via Email
-                            </button>
+                <div class="home-information">
+                    <div class="tabSection">
+                        <input type="radio" name="mytab" id="Overview" checked="checked">
+                        <label for="Overview">Overview</label>
+                        <div class="tab-content">
+                            <div class="overview-card">
+                                <div class="row">
+                                    <div class="label">Status:</div>
+                                    <div class="value" id="status"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Bedrooms:</div>
+                                    <div class="value" id="bedrooms"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Bathrooms:</div>
+                                    <div class="value" id="bathrooms"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Distance From Campus (ALU):</div>
+                                    <div class="value" id="distance"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Property Type:</div>
+                                    <div class="value" id="property-type"></div>
+                                </div>
+                            </div>
                         </div>
+                        <input type="radio" name="mytab" id="Features">
+                        <label for="Features">Amenities</label>
+                        <div class="tab-content">
+                            <div class="property-card">
+                                <div class="row">
+                                    <div class="label">Furnished:</div>
+                                    <div class="value" id="furnished"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Electricity Included in Rent:</div>
+                                    <div class="value" id="electricity"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Water Included in Rent:</div>
+                                    <div class="value" id="water"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">WIFI Included in Rent:</div>
+                                    <div class="value" id="wifi"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Water Heater:</div>
+                                    <div class="value" id="water-heater"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Microwave:</div>
+                                    <div class="value" id="microwave"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Blender:</div>
+                                    <div class="value" id="blender"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Oven:</div>
+                                    <div class="value" id="oven"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Kitchen Utensils:</div>
+                                    <div class="value" id="kitchen-utensils"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Cooking Utensils:</div>
+                                    <div class="value" id="cooking-utensils"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">TV:</div>
+                                    <div class="value" id="tv"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Air Condition/Fan:</div>
+                                    <div class="value" id="fan"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Washing Machine:</div>
+                                    <div class="value" id="washing-machine"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Security:</div>
+                                    <div class="value" id="security"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Extra Services:</div>
+                                    <div class="value" id="extra-services"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="radio" name="mytab" id="Ratings">
+                        <label for="Ratings">Ratings</label>
+                        <h1 class="tab-content">Sorry for the inconvenience. This option is still in progress but will be available soon.</h1>
                     </div>
                 </div>
             </div>
-            <div class="home-information">
-                <div class="tabSection">
-                    <input type="radio" name="mytab" id="Overview" checked="checked">
-                    <label for="Overview">Overview</label>
-                    <div class="tab-content">
-                        <div class="overview-card">
-                            <div class="row">
-                                <div class="label">Status:</div>
-                                <div class="value" id="status"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Bedrooms:</div>
-                                <div class="value" id="bedrooms"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Bathrooms:</div>
-                                <div class="value" id="bathrooms"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Distance From Campus (ALU):</div>
-                                <div class="value" id="distance"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Property Type:</div>
-                                <div class="value" id="property-type"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="radio" name="mytab" id="Features">
-                    <label for="Features">Amenities</label>
-                    <div class="tab-content">
-                        <div class="property-card">
-                            <div class="row">
-                                <div class="label">Furnished:</div>
-                                <div class="value" id="furnished"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Electricity Included in Rent:</div>
-                                <div class="value" id="electricity"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Water Included in Rent:</div>
-                                <div class="value" id="water"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">WIFI Included in Rent:</div>
-                                <div class="value" id="wifi"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Water Heater:</div>
-                                <div class="value" id="water-heater"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Microwave:</div>
-                                <div class="value" id="microwave"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Blender:</div>
-                                <div class="value" id="blender"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Oven:</div>
-                                <div class="value" id="oven"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Kitchen Utensils:</div>
-                                <div class="value" id="kitchen-utensils"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Cooking Utensils:</div>
-                                <div class="value" id="cooking-utensils"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">TV:</div>
-                                <div class="value" id="tv"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Air Condition/Fan:</div>
-                                <div class="value" id="fan"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Washing Machine:</div>
-                                <div class="value" id="washing-machine"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Security:</div>
-                                <div class="value" id="security"></div>
-                            </div>
-                            <div class="row">
-                                <div class="label">Extra Services:</div>
-                                <div class="value" id="extra-services"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="radio" name="mytab" id="Ratings">
-                    <label for="Ratings">Ratings</label>
-                    <h1 class="tab-content">Sorry for the inconvenience. This option is still in progress but will be available soon.</h1>
-                </div>
-            </div>
+            
         </div>
-        
-    </div>
+    </main>
     <footer>
         <div class="buttom-page-section">
             <div class="container1">

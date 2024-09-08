@@ -56,188 +56,191 @@
 </head>
 <body>
 
+    <nav>
+        <div class="navigation" >
+            <div class="left-section">
+                <a href="#featured-section">
+                    <img src="logo image/WiyoRent logo.jpg" alt="WiyoRent Logo">
+                </a>
+            </div>
+            <div class="middle-section">
+                <a href="#featured-section">
+                    <div class="featured">
+                        Featured Listing
+                    </div>
+                </a>
+                <a href="#about-us">
+                    <div class="about-us-nav">
+                        About Us
+                    </div>
+                </a>
+                
+            </div>
+            <div class="right-section">
+                <a href="add-to-favourite/add-to-favourite.html">
+                    <button><img src="icons/favourite-btn.png" alt="favourite"></button>
+                    <p class="favourite-counter js-cart-container"></p>
+                </a>
+            </div>
+        </div>
+    </nav>
     <!-- Navigation Bar -->
-    <div class="navigation" >
-        <div class="left-section">
-            <a href="#featured-section">
-                <img src="logo image/WiyoRent logo.jpg" alt="WiyoRent Logo">
-            </a>
-        </div>
-        <div class="middle-section">
-            <a href="#featured-section">
-                <div class="featured">
-                    Featured Listing
-                </div>
-            </a>
-            <a href="#about-us">
-                <div class="about-us-nav">
-                    About Us
-                </div>
-            </a>
-            
-        </div>
-        <div class="right-section">
-            <a href="add-to-favourite/add-to-favourite.html">
-                <button><img src="icons/favourite-btn.png" alt="favourite"></button>
-                <p class="favourite-counter js-cart-container"></p>
-            </a>
-        </div>
-    </div>
+    
 
     <!-- Main-Page -->
 
 
-
-    <div class="main-page" >
-        <div class="welcome-page">
-            <div class="background"></div>
-            <div class="foreground"></div>
-            <div class="content">
-                <h1 class="animate__animated animate__fadeInUp">Welcome to WiyoRent</h1> <br>
-                <p class="animate__animated animate__fadeInUp animate__delay-1s entry-message">Your Home Away From Home.</p>
-            </div>
-        </div>
-
-        <div class="brandAmbassador">
-            <div class="BAimg">
-                <img src="/logo image/BA.jpg" alt="">
-            </div>
-            <div class="animate__animated animate__slideInRight animate__delay-2s  BAmessage">
-                <p>Join our growing community of international students. We'll guide you through every step of the process, from finding the perfect location to securing a lease. Let WiyoRent take the housing hassle out of your Kigali experience.</p>
-            </div>
-        </div>
-       
-
-
-            <div id="featured-section" class="featured-section">
-                <div class="featured-intro">
-                    <h1>Featured Listings</h1>
-                    <p>Highlighted Listings</p>
-                </div>
-
-                <div class="featured_container">
-                    <div class="featured_house_grid">
-                    </div>
+    <main>
+        <div class="main-page" >
+            <div class="welcome-page">
+                <div class="background"></div>
+                <div class="foreground"></div>
+                <div class="content">
+                    <h1 class="animate__animated animate__fadeInUp">Welcome to WiyoRent</h1> <br>
+                    <p class="animate__animated animate__fadeInUp animate__delay-1s entry-message">Your Home Away From Home.</p>
                 </div>
             </div>
-
-            <div class="home-section">
-
-                <div id="home-section"  class="pageIntro">
-                    <h1>All Listings</h1>
-                    <p>Find Your Desired Student Accomodation</p>
+    
+            <div class="brandAmbassador">
+                <div class="BAimg">
+                    <img src="/logo image/BA.jpg" alt="">
                 </div>
-
-                <div class="filter-container">
-                    <form class="filter-container1" id="filter-form">
-                        <div>
-                            <label for="bedrooms">Bedrooms:</label>
-                            <select id="bedrooms" name="bedrooms">
-                                <option value="">All</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3+</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="bathrooms">Bathrooms:</label>
-                            <select id="bathrooms" name="bathrooms">
-                                <option value="">All</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3+</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label  for="Distance">Distance:</label>
-                            <select  id="Distance" name="Distance">
-                                <option value="">All</option>
-                                <option value="5-10">5min - 10min</option>
-                                <option value="10-20">10min - 20min</option>
-                                <option value="20-30">20min - 30min</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="Price">Price:</label>
-                            <select id="Price" name="Price">
-                                <option value="">All</option>
-                                <option value="150000-200000">RWF 150,000 - 200,000</option>
-                                <option value="200000-250000">RWF 200,000 - 250,000</option>
-                                <option value="250000-300000">RWF 250,000 - 300,000</option>
-                                <option value="300000-350000">RWF 300,000 - 350,000</option>
-                                <option value="350000+">RWF 350,000+</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="Status">Available:</label>
-                            <select id="Status" name="Status">
-                                <option value="">All</option>
-                                <option value="Available">Available</option>
-                                <option value="Unavailable">Unavailable</option>
-                            </select>
-                        </div>
-                        <button class="search-button">Search</button>
-                    </form>
-                </div>              
-                
-                <div class="container-grid js-container-grid">
-                </div> 
+                <div class="animate__animated animate__slideInRight animate__delay-2s  BAmessage">
+                    <p>Join our growing community of international students. We'll guide you through every step of the process, from finding the perfect location to securing a lease. Let WiyoRent take the housing hassle out of your Kigali experience.</p>
+                </div>
             </div>
-
-        <footer>
-            <div class="buttom-page-section">
-                <div class="container1">
-                    <div id="about-us" class="about-us">
-                        <div class="about-us-title">
-                            About Us
-                        </div>
-                        <div class="about-us-message">
-                            WiyoRent is your go-to solution for affordable student accommodation in Kigali, Rwanda. Specializing in serving international students, our dedicated team ensures a seamless experience in finding the perfect home that fits your budget and lifestyle. Discover stress-free, affordable housing options with WiyoRent today!
-                        </div>
+           
+    
+    
+                <div id="featured-section" class="featured-section">
+                    <div class="featured-intro">
+                        <h1>Featured Listings</h1>
+                        <p>Highlighted Listings</p>
                     </div>
     
-                    <div class="about-us-information">
-                        <div class="meet-the-team">
-                            Meet The Team
-                        </div>
-    
-                        <div class="icon-img">
-                            <a href="https://www.instagram.com/wiyorent?igsh=emN5Z28yb3UwZ3U3&utm_source=qr" target="_blank">
-                                <img src="/icons/instagram.png" alt="WiyoRent Instagram Page">
-                            </a>
-                            
-                            <a href="https://www.linkedin.com/company/wiyorent/" target="_blank">
-                                <img src="/icons/linkedin_220201.png" alt="Wiyorent linkedin link">
-                            </a>
-                        
-                            <a href="https://www.facebook.com/share/ztCzuHNGfUAFqVqU/?mibextid=LQQJ4d" target="_blank">
-                                <img src="/icons/meta.png" alt="WiyoRent facebook link">
-                            </a>
-                        
-                            <a href="https://www.tiktok.com/@wiyorent?_t=8nm23uiJwTl&_r=1" target="_blank">
-                                <img src="/icons/tiktok.png" alt="WiyoRent Email">
-                            </a>
-                        </div>
-
-
-                        <div class="email">
-                           Email: wiyorent@gmail.com
-                        </div>
-                        <div class="email">
-                            WhatsApp: + 250-794-089-835
+                    <div class="featured_container">
+                        <div class="featured_house_grid">
                         </div>
                     </div>
                 </div>
+    
+                <div class="home-section">
+    
+                    <div id="home-section"  class="pageIntro">
+                        <h1>All Listings</h1>
+                        <p>Find Your Desired Student Accomodation</p>
+                    </div>
+    
+                    <div class="filter-container">
+                        <form class="filter-container1" id="filter-form">
+                            <div>
+                                <label for="bedrooms">Bedrooms:</label>
+                                <select id="bedrooms" name="bedrooms">
+                                    <option value="">All</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3+</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="bathrooms">Bathrooms:</label>
+                                <select id="bathrooms" name="bathrooms">
+                                    <option value="">All</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3+</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label  for="Distance">Distance:</label>
+                                <select  id="Distance" name="Distance">
+                                    <option value="">All</option>
+                                    <option value="5-10">5min - 10min</option>
+                                    <option value="10-20">10min - 20min</option>
+                                    <option value="20-30">20min - 30min</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="Price">Price:</label>
+                                <select id="Price" name="Price">
+                                    <option value="">All</option>
+                                    <option value="150000-200000">RWF 150,000 - 200,000</option>
+                                    <option value="200000-250000">RWF 200,000 - 250,000</option>
+                                    <option value="250000-300000">RWF 250,000 - 300,000</option>
+                                    <option value="300000-350000">RWF 300,000 - 350,000</option>
+                                    <option value="350000+">RWF 350,000+</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="Status">Available:</label>
+                                <select id="Status" name="Status">
+                                    <option value="">All</option>
+                                    <option value="Available">Available</option>
+                                    <option value="Unavailable">Unavailable</option>
+                                </select>
+                            </div>
+                            <button class="search-button">Search</button>
+                        </form>
+                    </div>              
+                    
+                    <div class="container-grid js-container-grid">
+                    </div> 
+                </div>     
+        </div>
+    </main>
+    
+    <footer>
+        <div class="buttom-page-section">
+            <div class="container1">
+                <div id="about-us" class="about-us">
+                    <div class="about-us-title">
+                        About Us
+                    </div>
+                    <div class="about-us-message">
+                        WiyoRent is your go-to solution for affordable student accommodation in Kigali, Rwanda. Specializing in serving international students, our dedicated team ensures a seamless experience in finding the perfect home that fits your budget and lifestyle. Discover stress-free, affordable housing options with WiyoRent today!
+                    </div>
+                </div>
+
+                <div class="about-us-information">
+                    <div class="meet-the-team">
+                        Meet The Team
+                    </div>
+
+                    <div class="icon-img">
+                        <a href="https://www.instagram.com/wiyorent?igsh=emN5Z28yb3UwZ3U3&utm_source=qr" target="_blank">
+                            <img src="/icons/instagram.png" alt="WiyoRent Instagram Page">
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/company/wiyorent/" target="_blank">
+                            <img src="/icons/linkedin_220201.png" alt="Wiyorent linkedin link">
+                        </a>
+                    
+                        <a href="https://www.facebook.com/share/ztCzuHNGfUAFqVqU/?mibextid=LQQJ4d" target="_blank">
+                            <img src="/icons/meta.png" alt="WiyoRent facebook link">
+                        </a>
+                    
+                        <a href="https://www.tiktok.com/@wiyorent?_t=8nm23uiJwTl&_r=1" target="_blank">
+                            <img src="/icons/tiktok.png" alt="WiyoRent Email">
+                        </a>
+                    </div>
+
+
+                    <div class="email">
+                       Email: wiyorent@gmail.com
+                    </div>
+                    <div class="email">
+                        WhatsApp: + 250-794-089-835
+                    </div>
+                </div>
             </div>
-        </footer>
-            
-    </div>
+        </div>
+    </footer>
 
 </body>
     <script src="welcome-page-css/animation.js"></script>
     <script src="Javasciript/imageSlider.js"></script>
     <script src="Javasciript/featured_listing_image-slider.js"></script>
 
-       <script type="module" src="/script/featured_listing.js"></script>
+    <script type="module" src="/script/featured_listing.js"></script>
     <script type="module" src="/script/main.js"></script>
 </html>
