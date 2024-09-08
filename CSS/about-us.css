@@ -4,9 +4,11 @@
     display: flex;
     height: fit-content;
     padding: 5px;
-    width: 100vw;
+    width: 105vw;
     margin-top: 150px;
     padding-bottom: 20px;
+    margin-left: -30px;
+    margin-bottom: -10px;
 }
 
 .buttom-page-section a{
@@ -28,13 +30,25 @@
     font-weight: bolder;
     padding: 10px;
     border-radius: 15px;
-  
+    margin-left: 25px;
 }
+
+.about-us-message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 15px;
+}
+
 
 .about-us-information{
     width: 100%;
     text-align: center;
     margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
 }
 
 .container1{
@@ -42,7 +56,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: max-content;
 }
+
 
 .meet-the-team{
     background-color: #fdbf04;
@@ -85,6 +101,12 @@
 @media (min-width:768px){
     .about-us{
         font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1200px){
+    .about-us-message{
+        margin-right: 25px;
     }
 }
 

@@ -290,6 +290,12 @@ input:focus {
 }
 
 @media (min-width:1024px) {
+
+    .favourite-listing-page .home-container{
+        width: max-content;
+       margin-right: -20px !important;
+    }
+
     .home-container h1 {
         width: 90%;
         font-size: 1.2rem !important;
@@ -297,7 +303,7 @@ input:focus {
 
 
     .middle-section{
-        padding-left: 4dvi !important;
+        padding-left: 4px !important;
     }
 
     .nav-section .logo img{
@@ -305,7 +311,7 @@ input:focus {
     }
 
     .home-overview{
-        width: 80%;
+        width: 90%;
     }
 }
 
