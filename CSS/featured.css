@@ -28,6 +28,7 @@
     width: 100% !important;
     display: none;
     cursor: pointer;
+    object-fit: cover;
     height: 250px;
 }
 
@@ -143,6 +144,19 @@
     border-radius: 5px;
 }
 
+@media (min-width:425px){
+    .featured-house .left-button, .featured-house .right-button{
+        opacity: 0;
+    }
+
+    .featured_house_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 28px;
+        row-gap: 35px;
+    }
+
+}
 
 @media (min-width:754px){
     

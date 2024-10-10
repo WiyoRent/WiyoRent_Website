@@ -279,6 +279,10 @@ p{
     .container img{
         width: 100%;
     }
+
+    .js-image-container .left-button, .js-image-container .right-button{
+        opacity: .30;
+    }
 }
 
 @media (min-width:754px){
@@ -290,6 +294,12 @@ p{
 
     .container{
         width: 350px;
+    }  
+}
+
+@media (min-width:992px){
+    .js-image-container .left-button, .js-image-container .right-button{
+        opacity: 0;
     }
 }
 
