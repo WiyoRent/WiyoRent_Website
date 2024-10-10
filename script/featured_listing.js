@@ -15,7 +15,7 @@ featured_houses.forEach((featured_house) => {
     ];
 
     // Generate HTML for images
-    const imagesHTML = allImages.map(src => `<img src="${src}" alt="">`).join('');
+    const imagesHTML = allImages.map(src => `<img src="${src}" alt="" loading="lazy">`).join('');
 
     featuredHTML += `
                     <div class="featured-house">

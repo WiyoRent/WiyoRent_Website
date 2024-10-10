@@ -9,7 +9,6 @@ function filterListings() {
     const price = document.getElementById('Price').value;
     const status = document.getElementById('Status').value;
 
-    console.log("Filter criteria:", { bedrooms, bathrooms, distance, price, status });
 
     const filteredListings = main_Listings.filter(listing => {
         let matches = true;
@@ -34,7 +33,6 @@ function filterListings() {
         return matches;
     });
 
-    console.log("Filtered Listings:", filteredListings);
 
     displayListings(filteredListings);
     attachDetailPageListeners();  // Attach listeners after displaying listings
@@ -62,7 +60,7 @@ function displayListings(listings) {
             ...main_Listing.houseImg.Bathroom
         ];
 
-        const imagesHTML = allImages.map(src => `<img src="${src}" alt="${main_Listing.house_overview.house_name}">`).join('');
+        const imagesHTML = allImages.map(src => `<img src="${src}" alt="${main_Listing.house_overview.house_name}" loading="lazy">`).join('');
 
         main_page += `
             <div class="container">
@@ -70,8 +68,7 @@ function displayListings(listings) {
                     <a href="detailed-listing-page/detailed-listing.html" class="js-detailed-listing" data-house-id="${main_Listing.id}">
                         ${imagesHTML}
                     </a>
-                    <div class="status">${main_Listing.house_overview.status}</div>
-                    <div class="advert-type">${main_Listing.house_overview.advert_type}</div>
+                    <div class="advert-type">${main_Listing.house_overview.status}</div>
                     <button class="left-button">
                         <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="M561-240 320-481l241-241 43 43-198 198 198 198-43 43Z"/></svg>
                     </button>

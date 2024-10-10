@@ -15,7 +15,7 @@ function renderFavouriteListings(listings) {
                 <div class="home-container js-home-container-delete-${matching_house.id}">
                     <div class="house-image">
                         <a href="../detailed-listing-page/detailed-listing.html" class="js-detailed-listing" data-house-id="${matching_house.id}">
-                            <img class="houseImg" src="${matching_house.houseImg.Outdoor}" alt="${matching_house.house_overview.house_name}">
+                            <img class="houseImg" src="${matching_house.houseImg.Outdoor}" alt="${matching_house.house_overview.house_name}" loading="lazy">
                         </a>
                     </div>
                     <div class="house-details">

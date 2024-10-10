@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (selectedHouse) {
         document.querySelector('.js-detailed-home-grid .js-detailed-image-container').innerHTML = `
-            ${selectedHouse.houseImg.Outdoor.map(src => `<img src="${src}" alt="">`).join('')}
-            ${selectedHouse.houseImg.LivingRoom.map(src => `<img src="${src}" alt="">`).join('')}
-            ${selectedHouse.houseImg.Kitchen.map(src => `<img src="${src}" alt="">`).join('')}
-            ${selectedHouse.houseImg.Bedroom.map(src => `<img src="${src}" alt="">`).join('')}
-            ${selectedHouse.houseImg.Bathroom.map(src => `<img src="${src}" alt="">`).join('')}
+            ${selectedHouse.houseImg.Outdoor.map(src => `<img src="${src}" alt="${selectedHouse.house_overview.house_name} Outdoor View" loading="lazy">`).join('')}
+            ${selectedHouse.houseImg.LivingRoom.map(src => `<img src="${src}" alt="${selectedHouse.house_overview.house_name} LivingRoom View" loading="lazy">`).join('')}
+            ${selectedHouse.houseImg.Kitchen.map(src => `<img src="${src}" alt="${selectedHouse.house_overview.house_name} Kitchen View" loading="lazy">`).join('')}
+            ${selectedHouse.houseImg.Bedroom.map(src => `<img src="${src}" alt="${selectedHouse.house_overview.house_name} Bedroom View" loading="lazy">`).join('')}
+            ${selectedHouse.houseImg.Bathroom.map(src => `<img src="${src}" alt="${selectedHouse.house_overview.house_name} Bathroom View" loading="lazy">`).join('')}
             <button class="left-button">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="M561-240 320-481l241-241 43 43-198 198 198 198-43 43Z"/></svg>
             </button>
