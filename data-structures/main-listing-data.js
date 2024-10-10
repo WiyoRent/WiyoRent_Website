@@ -79,7 +79,7 @@ export const main_Listings= [
         house_overview: {
                             house_name: '2-Bedroom Studio For Rent In Masoro',
                             house_price: 250000,
-                            house_commission: 10,
+                            house_commission: 37500,
                             status: 'Available',
                             bedrooms:2,
                             bathrooms:2,
@@ -133,7 +133,7 @@ export const main_Listings= [
         house_overview: {
                             house_name: '3-Bedroom Studio For Rent In Zindiro',
                             house_price: 200000,
-                            house_commission: 10,
+                            house_commission: 36000,
                             status: 'Booked',
                             statusMessage: 'Available(Oct-16)',
                             bedrooms:3,
@@ -187,7 +187,7 @@ export const main_Listings= [
         house_overview: {
                             house_name: '1-Bedroom Studio For Rent In Masoro',
                             house_price: 300000,
-                            house_commission: 10,
+                            house_commission: 55000,
                             status: 'Available',
                             bedrooms:1,
                             bathrooms:1,
@@ -346,7 +346,7 @@ export const main_Listings= [
         house_overview: {
                             house_name: '1-Bedroom House For Rent In Bumbogo',
                             house_price: 265000,
-                            house_commission: 10,
+                            house_commission: 26500,
                             status: 'Booked',
                             bedrooms:1,
                             bathrooms:1,
@@ -465,14 +465,14 @@ export const main_Listings= [
         house_overview: {
                             house_name: '6-Bedroom Duplex For Rent In Bumbongo',
                             house_price: 250000,
-                            house_commission: 10,
+                            house_commission: 50000,
                             status: 'Booked',
                             bedrooms:6,
                             bathrooms:3,
                             distance:8,
                             property_type:'Duplex',
                             advert_type: 'Normal',
-                            security_deposit: 250000,
+                            security_deposit: 1500000,
                             security_deposit_status: 'Required',
                             minimun_stay_period: 2,
                             booking_fee: 750000
@@ -518,7 +518,7 @@ export const main_Listings= [
         house_overview: {
                             house_name: '1-Bedroom Studio For Rent In Kwananzira',
                             house_price: 170000,
-                            house_commission: 10,
+                            house_commission: 34000,
                             status: 'Booked',
                             bedrooms:1,
                             bathrooms:1,
@@ -571,7 +571,7 @@ export const main_Listings= [
         house_overview: {
                             house_name: '1-Bedroom Studio For Rent In Kwananzira',
                             house_price: 170000,
-                            house_commission: 10,
+                            house_commission: 34000,
                             status: 'Booked',
                             bedrooms:1,
                             bathrooms:1,

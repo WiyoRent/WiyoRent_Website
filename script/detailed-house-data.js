@@ -20,25 +20,21 @@ document.addEventListener('DOMContentLoaded', () => {
             </button>
         `;
 
-        document.querySelector('.Listing-Details .Commision p').innerText = `Service Fee (${selectedHouse.house_overview.house_commission}%):`;
-        document.querySelector('.Commision h4').innerText = `RWF ${priceConversion(selectedHouse.house_overview.house_price * (selectedHouse.house_overview.house_commission / 100))}`;
+        document.querySelector('.Listing-Details .Commision p').innerText = `Service Fee:`;
+        document.querySelector('.Commision h4').innerText = `RWF ${priceConversion(selectedHouse.house_overview.house_commission)}/roomate`;
         document.querySelector('.Listing-title h2').innerText = selectedHouse.house_overview.house_name;
         document.querySelector('.Listing-title .faveBtn').innerHTML = ` 
             <button data-house-id="${selectedHouse.id}" class="add-to-favourite">
                 <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="M200-120v-656.67q0-27 19.83-46.83 19.84-19.83 46.84-19.83h426.66q27 0 46.84 19.83Q760-803.67 760-776.67V-120L480-240 200-120Zm66.67-101.33L480-312l213.33 90.67v-555.34H266.67v555.34Zm0-555.34h426.66-426.66Z"/></svg>
             </button>
         `;
-        document.querySelector('.House-Price h4').innerText = `RWF ${priceConversion(selectedHouse.house_overview.house_price)}/roommate/month`;
-        document.querySelector('.total h4').innerText = `RWF ${priceConversion(selectedHouse.house_overview.house_price + selectedHouse.house_overview.house_price * (selectedHouse.house_overview.house_commission / 100))}/Roommate`;
+        document.querySelector('.House-Price h4').innerText = `RWF ${priceConversion(selectedHouse.house_overview.house_price)}/roommate`;
+        // document.querySelector('.total h4').innerText = `RWF ${priceConversion(selectedHouse.house_overview.house_price + selectedHouse.house_overview.house_price * (selectedHouse.house_overview.house_commission / 100))}/Roommate`;
         document.querySelector('.minimum_stay h4').innerText = `${selectedHouse.house_overview.minimun_stay_period} months`;
 
         document.querySelector('.Security-Deposit').innerHTML = `
             <p>Security Deposit (${selectedHouse.house_overview.security_deposit_status} & Refundable):</p>
             <h4>RWF ${priceConversion(selectedHouse.house_overview.security_deposit)}</h4>
-        `;
-        document.querySelector('.Booking-Fee').innerHTML = `
-            <p>Booking-Fee (Optional & Non-Refundable):</p>
-            <h4>RWF ${priceConversion(selectedHouse.house_overview.booking_fee)}</h4>
         `;
 
         document.querySelector('.user-message textarea').innerText = `Hello, I am interested in booking a room in this ${selectedHouse.house_overview.house_name}`;
