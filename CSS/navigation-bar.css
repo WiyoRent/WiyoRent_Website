@@ -99,6 +99,14 @@ input:focus{
     font-size: 1.7rem;
 }
 
+#featured-section{
+    scroll-margin-top: 60px;
+}
+
+#about-us{
+    scroll-margin-top: 230px ;
+}
+
 @media (min-width:754px){
 
     .middle-section .featured,

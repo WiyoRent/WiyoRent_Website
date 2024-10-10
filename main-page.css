@@ -9,6 +9,10 @@ body{
     background-color: hsla(0, 0%, 92%, 0.779);
 }
 
+html,body{
+    scroll-behavior: smooth;
+}
+
 p{
     margin: 0px;
 }
