@@ -54,7 +54,7 @@
 }
 
 @keyframes fade{
-    from {opacity: .65}
+    from {opacity: .85}
     to {opacity: 1}
 }
 
