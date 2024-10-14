@@ -21,14 +21,14 @@ export const featured_houses = [
                 },
 
         house_overview: {
-                            house_name: '1-Bedroom Studio For Rent In Masoro',
+                            house_name: '1-Bedroom House For Rent In Masoro',
                             house_price: 300000,
                             house_commission: 55000,
                             status: 'Available',
                             bedrooms:1,
                             bathrooms:1,
                             distance:10,
-                            property_type:'Studio',
+                            property_type:'House',
                             advert_type: 'Featured',
                             security_deposit: 250000,
                             security_deposit_status: 'Required',
@@ -76,7 +76,7 @@ export const featured_houses = [
                 },
 
         house_overview: {
-                            house_name: '3-Bedroom Studio For Rent In Zindiro',
+                            house_name: '3-Bedroom House For Rent In Zindiro',
                             house_price: 200000,
                             house_commission: 36000,
                             status: 'Available (Oct 16)',
@@ -130,7 +130,7 @@ export const featured_houses = [
                 },
 
         house_overview: {
-                            house_name: '2-Bedroom Studio For Rent In Masoro',
+                            house_name: '2-Bedroom House For Rent In Masoro',
                             house_price: 250000,
                             house_commission: 37500,
                             status: 'Available',
