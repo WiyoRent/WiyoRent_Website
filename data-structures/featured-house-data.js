@@ -79,7 +79,7 @@ export const featured_houses = [
                             house_name: '3-Bedroom House For Rent In Zindiro',
                             house_price: 200000,
                             house_commission: 36000,
-                            status: 'Available (Oct 16)',
+                            status: 'Available (Soon)',
                             bedrooms:3,
                             bathrooms:3,
                             distance:10,
