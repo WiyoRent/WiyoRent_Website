@@ -78,8 +78,8 @@ export const main_Listings= [
 
         house_overview: {
                             house_name: '2-Bedroom House For Rent In Masoro',
-                            house_price: 250000,
-                            house_commission: 37500,
+                            house_price: 175000,
+                            house_commission: 30000,
                             status: 'Available',
                             bedrooms:2,
                             bathrooms:2,
