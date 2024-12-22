@@ -86,17 +86,19 @@ input:focus{
     justify-content: space-around;
 }
 
-.middle-section .featured,
+.middle-section 
+.featured,
                 .about-us-nav{
    color: white;
    font-size: 1rem;
    transition: font-size .5s;
 }
 
-.middle-section .featured:hover,
-                .about-us-nav:hover{
-    text-decoration: underline  #fdbf04;
-    font-size: 1.7rem;
+.middle-section 
+.featured:hover,
+.about-us-nav:hover{
+    border-bottom: 2px solid #fdbf04;
+    font-size: 1.3rem;
 }
 
 #featured-section{
@@ -107,10 +109,13 @@ input:focus{
     scroll-margin-top: 230px ;
 }
 
+
+
 @media (min-width:754px){
 
-    .middle-section .featured,
-                .about-us-nav{
+    .middle-section 
+    .featured,   
+    .about-us-nav{
         font-size: 1.2rem;
         
     }
