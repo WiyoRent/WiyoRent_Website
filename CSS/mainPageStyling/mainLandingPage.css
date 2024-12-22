@@ -50,12 +50,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 500px;
+    width: 400px;
 }
 
-.landingPageButtons button{
-   font-size: 1rem;
-}
 
 .landingPageButtons button:hover{
 background-color: #dca90d;
@@ -64,5 +61,13 @@ background-color: #dca90d;
 @media (min-width:768px){
     .landingPage h1{
         font-size: 3.5rem;
+    }
+
+    .landingPageButtons button{
+        font-size: 1rem;
+     }
+
+     .landingPageButtons{
+        width: 500px;
     }
 }
