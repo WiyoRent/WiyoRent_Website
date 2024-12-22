@@ -15,14 +15,12 @@
     text-decoration: none;
 }
 
-
 .about-us{
     width: 90%;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     margin-bottom: 20px;
 }
-
 
 .about-us .about-us-title{
     text-align: center;
@@ -97,6 +95,8 @@
     margin: 0px;
     margin-left: -5px;  
 }
+
+
 
 @media (min-width:768px){
     .about-us{
