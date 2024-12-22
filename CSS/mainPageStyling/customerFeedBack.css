@@ -1,0 +1,95 @@
+.customerFeedBackSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:35vh;
+    padding-top: 35px;
+
+    scale: .7;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 210px;
+}
+
+.customerFeedBackGrid{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 170px;
+    width: 98%;
+}
+
+.customerFeedBackGrid::-webkit-scrollbar {
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    height: 7px;
+}
+
+.customerFeedBackGrid::-webkit-scrollbar-thumb{
+    background-color: #fdbf04;
+    border-radius: 10px;
+    border: 1px solid white;
+    height: 3px;
+}
+
+.customerFeedBackGrid::-webkit-scrollbar-thumb:hover{
+    background-color: #dca80c;
+}
+
+.customerFeedCard{
+    background-color: #f3b706;
+    position: relative;
+    height: 140px;
+    border-radius: 5px;
+    min-width: 85%;
+    color: black;
+    border: 2px solid black;
+    overflow-y: auto;
+}
+
+.customerFeedCard::-webkit-scrollbar{
+    background-color: transparent;
+    height: 100px;
+    width: 7px;
+    margin-right: 3px;
+}
+
+.customerFeedCard::-webkit-scrollbar-thumb{
+    background-color: black;
+    height: 3px;
+    border: 1px solid #dca80c;
+    border-radius: 10px;
+    width: 2px;
+}
+
+
+.customerFeedCard .customerName{
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    color: white;
+    padding-bottom: 1px;
+    border-bottom: 2px solid black;
+    font-weight: 800;
+}
+
+.customerFeedCard p:last-child{
+    position: absolute;
+    top: 27%;
+    left: 3%;
+    color: black;
+    margin: 0 auto;
+    width: 95%;
+}
+
+@media (min-width:1024px) {
+    .customerFeedCard{
+        min-width: 55%;
+    }
+}
