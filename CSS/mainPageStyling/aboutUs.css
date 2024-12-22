@@ -1,0 +1,202 @@
+/* About Us Section */
+.aboutUs{
+    scale: .7;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
+}
+
+.companyIntro{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    max-width: 95%;
+    margin: 0 auto;
+
+    scale: .7;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 200px 500px;
+}
+
+ .tabSection {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+    margin: 0 auto;
+    max-width: 85%;
+    align-self: center;
+    padding-bottom: 55px;
+
+    scale: .5;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 80px 500px;
+
+    /* scale: .7;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 200px 500px; */
+}
+
+/* TabSection */
+
+.tabSection label{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-top: 30px;
+}
+
+.tabSection label {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 1px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="radio"]:checked + label{
+    border-bottom: 3px solid #fdbf04;
+}
+
+.tabContent {
+    opacity: 0;
+    max-height: 0;
+    visibility: hidden;
+    order: 1;
+}
+
+.tabContent h4 {
+    padding-top: 10px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.tabContent p {
+    color: black;
+    padding-left: 10px;
+    border-left: 2px solid white;
+    line-height: 1.4; /* Adjust this value for more or less spacing  */
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label + .tabContent{
+    transition: opacity 1s;
+    opacity: 1;
+    display: block;
+    box-sizing: border-box;
+    opacity: 1;
+    max-height: 100vh;
+    transition: opacity 3s ease, max-height 3s ease;
+    visibility: visible;
+}
+
+/* Achievement Section */
+
+.achievementGrid{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+
+    scale: .7;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 0px 0px;
+}
+
+.achievements h3{
+    scale: .7;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 200px 500px;
+}
+
+.achievementCard img{
+    width: 100px;
+}
+
+.achievementCard{
+    text-align: center;
+    background-color: #fdbf04;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    scale: .7;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
+}
+
+.achievementCardImg{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.achievementCard p:first-child{
+    font-size: 1.6rem;
+    position: relative;
+    font-weight: 900;
+}
+
+
+.achievementCard p:first-child span{
+    position: absolute;
+    bottom: 6px;
+    font-size: 2rem;
+}
+
+.achievementCard span{
+    font-weight: 600;
+}
+
+@media (min-width:768px){
+    .achievementGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 30px;
+    }
+
+    .achievementCard img{
+        width: 65px;
+    }
+
+    .achievementCard:last-child{
+       font-size: 0.85rem;
+    }
+}
+
+
+@media (min-width: 1024px){
+    .companyIntro p{
+        font-size: 1.1rem;
+    }
+
+    .tabContent {
+        font-size: 1.1rem;
+    }
+
+}
