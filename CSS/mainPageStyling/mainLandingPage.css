@@ -1,0 +1,68 @@
+.landingPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    z-index: 1;
+    font-size: 1.5rem;
+    padding: 0px 8px;
+    box-sizing: border-box;
+}
+
+.background, .foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+    object-fit: contain;
+    object-position: center;
+    z-index: -1;
+}
+
+.background {
+    background-image: url(https://rcb.rw/IMG/logo/arton11.jpg?1586601110);
+}
+
+.foreground {
+    background-image: url(https://www.kcc.rw/uploads/9/8/2/4/98249186/illume_orig.jpg);
+    mask-image: linear-gradient(var(--direction), rgba(0,0,0,1) 40%, rgba(0,0,0,0) 60%);
+    mask-position: 10% 10%;
+    object-fit: contain;
+    object-position: left;
+}
+
+.landingPage h1{
+    padding-bottom: 20px;
+    text-shadow: 5px 5px black;
+}
+
+.landingPageButtons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+}
+
+.landingPageButtons button{
+   font-size: 1rem;
+}
+
+.landingPageButtons button:hover{
+background-color: #dca90d;
+ }
+
+@media (min-width:768px){
+    .landingPage h1{
+        font-size: 3.5rem;
+    }
+}

@@ -1,0 +1,68 @@
+nav{
+    top: 0px;
+    position: sticky;
+    background-color: black;
+    width: 100%;
+    z-index: 2;
+}
+
+
+nav img{
+    width: 100px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    color: white;
+}
+
+nav ul .leftNav{
+    flex: 1;
+}
+nav ul .mainNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 65%;
+}
+
+nav ul .mainNav li{
+    transition: font-size .5s;
+}
+
+nav ul .mainNav a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul .mainNav li:hover{
+    border-bottom: 2px solid #fdbf04;
+    font-size: 1.3rem;
+}
+
+#AboutUsNav{
+    scroll-margin-top: 225px;
+}
+
+#OurServicesNav{
+    scroll-margin-top: 225px;
+}
+
+#ContactNav{
+    scroll-margin-top: 225px    ;
+}
+
+#settlingAssistance{
+    scroll-margin-top: 175px;
+}
+
+@media (min-width:768px){
+    nav ul .mainNav{
+        font-size: 1rem; 
+    }
+
+    nav ul .leftNav{
+        flex: 1;
+    }
+}
