@@ -2,208 +2,252 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="x-icon" href="logo image/WiyoRent logo.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WiyoRent | Find Student Housing in Kigali</title>
-    <meta name="description" content="WiyoRent is a student-led platform that helps students find affordable housing in Kigali, Rwanda. Discover tailored accommodation options that fit your needs and budget, making your living experience comfortable and convenient. Join WiyoRent today and simplify your search for the ideal student home in Rwanda!">
+    <title>WiyoRent</title>
 
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Wiyorent",
-          "description": "Platform to help students find affordable housing in Kigali.",
-          "url": "https://www.wiyorent.com",
-          "logo": "https://www.wiyorent.com/logo.png",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Kigali",
-            "addressCountry": "RW"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "wiyorent@gmail.com",
-            "telephone": "+250-794-089-835",
-            "contactType": "Customer Service"
-          },
-          "sameAs": [
-            "https://www.facebook.com/wiyorent",
-            "https://www.twitter.com/wiyorent",
-            "https://www.instagram.com/wiyorent",
-            "https://www.linkedin.com/company/wiyorent",
-            "https://www.tiktok.com/@wiyorent"
-          ]
-        }
-    </script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="/CSS/navigation-bar.css">
-    <link rel="stylesheet" href="welcome-page-css/welcome-page.css">
-    <link rel="stylesheet" href="main-page.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="CSS/about-us.css">
-    <link rel="stylesheet" href="CSS/featured.css">
-    <link rel="stylesheet" href="CSS/filter.css">
-    <!-- Google links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" type="x-icon" href="/logo image/WiyoRent logo.jpg">
+    <link rel="stylesheet" href="landpage.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
+
+    <link rel="stylesheet" href="/CSS/mainPageStyling/generalStyling.css">
+    <link rel="stylesheet" href="/welcome-page-css/welcome-page.css">
+    <link rel="stylesheet" href="/CSS/mainPageStyling/navPage.css">
+    <link rel="stylesheet" href="/CSS/mainPageStyling/mainLandingPage.css">
+    <link rel="stylesheet" href="/CSS/mainPageStyling/aboutUs.css">
+    <link rel="stylesheet" href="/CSS/mainPageStyling/packages.css">
+    <link rel="stylesheet" href="/CSS/mainPageStyling/customerFeedBack.css">
+    <link rel="stylesheet" href="/CSS/about-us.css">
+
 </head>
 <body>
-
     <nav>
-        <div class="navigation" >
-            <div class="left-section">
-                <a href="#featured-section">
-                    <img src="logo image/WiyoRent logo.jpg" alt="WiyoRent Logo">
-                </a>
+        <ul>
+            <div class="leftNav">
+                <li class="logo">
+                    <a href="./index.html">
+                        <img src="/logo image/WiyoRent logo.jpg" alt="Wiyorent Logo">
+                    </a>
+                 
+                </li>
             </div>
-            <div class="middle-section">
-                <a href="#featured-section">
-                    <div class="featured">
-                        Featured Listing
-                    </div>
+            <div class="mainNav">
+                <li><a href="#AboutUsNav">About Us</a></li>
+                <li><a href="#OurServicesNav">Services</a></li>
+                <li><a href="#ContactNav">Contact Us</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="landingPage">
+        <div class="background"></div>
+        <div class="foreground"></div>
+        <h1>Welcome to WiyoRent</h1>
+        <div class="landingPageButtons">
+            
+                <button>
+                    <a href="wiyorent.html"> 
+                        Explore Student Accomodations
+                    </a>
+                </button>
+        
+            <button>
+                <a href="#settlingAssistance">
+                    Get Settled in Kigali
                 </a>
-                <a href="#about-us">
-                    <div class="about-us-nav">
-                        About Us
+            </button>
+        </div>
+    </div>
+    
+    <main>
+        <div id="AboutUsNav" class="aboutUs">
+            <h3 class="heading">ABOUT US</h3>
+            <div class="companyIntro">
+                <h3 style="text-align: center; padding-bottom: 10px;">Who are we</h3>
+                <p>We are a startup focused on simplifying the search for student-specific accommodations in Kigali. In addition to housing, we offer essential services to help students settle in, including airport pickups, bank account setup, SIM card assistance, and visa application support. Our goal is to ensure a smooth and enjoyable transition for students in their new environment.</p>
+            </div>
+            <div class="tabSection">
+                <input type="radio" id="experience" name="Checked" checked="checked">
+                <label for="experience">Our Mission</label>
+                <div class="tabContent">
+                    <h4>What drives us here at WiyoRent.</h4>
+                    <p>To revolutionize the African real estate industry by harnessing technology to address the changing market demands, with a specific emphasis on delivering innovative student housing solutions and streamlining the process for students seeking accommodation.</p>
+                </div>
+
+                <input type="radio" id="education" name="Checked">
+                <label for="education">Our Vision</label>
+                <div class="tabContent">
+                    <h4>Our Future Aspirations.</h4>
+                    <p>
+                        We aspire to shape the future of African Real Estate, providing cutting-edge student housing that meets the evolving needs of the modern student and be the go-to African leader in faciliating student housing search in Africa.
+                    </p>
+                </div>
+            </div>
+            <div class="achievements">
+                <h3 style="text-align: center;">So, what have we achieved so far?</h3>
+                <div class="achievementGrid">
+                    <div class="achievementCard">
+                        <p>50 <span>+</span></p>
+                        <p>The number of <span>
+                            students
+                        </span> we have proudly served in less than <span> five months</span> of operating.</p>
                     </div>
-                </a>
+                    <div class="achievementCard">
+                        <p>15 <span>+</span></p>
+                        <p>The number of <span>
+                            landlords
+                        </span> whose properties we have successfully leased.</p>
+                    </div>
+                    <div class="achievementCard">
+                        <div class="achievementCardImg">
+                            <img src="/icons/cmu_logo.png" alt="CarnegieMellon University Logo">
+                            <img src="https://static.wixstatic.com/media/e77540_03cdbded28ff4127b8a12ac4a75521ef~mv2.png/v1/fill/w_380,h_380,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ALU%20Small.png" alt="African Leadership Logo">
+                        </div>
+                       
+                        <p>Successfully provided our service to students from both <span>African Leadership University</span> and <span>
+                            Carnegie Mellon University Africa</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="OurServicesNav" class="ourServices">
+            <h2 class="heading">OUR SERVICES</h2>
+            <div class="agency">
+                <h3>Find Your Student Accomodation</h3>
+                    <p>Because Finding a comfortable house is as important as your studies</p>
+                <div class="serviceCard">
+                    <div class="packagesInfo">
+                        <ul>
+                            <li>No visiting Fees</li>
+                            <li>Transperency on all listings</li>
+                            <li>Friendly Agency Fee</li>
+
+                        </ul>
+                    </div>
+                    
+                    <a href="wiyorent.html">
+                        <button class="serviceCardButton">Explore Student Accomodations</button>
+                    </a>
+                </div>
                 
             </div>
-            <div class="right-section">
-                <a href="add-to-favourite/add-to-favourite.html">
-                    <button><img src="icons/favourite-btn.png" alt="favourite"></button>
-                    <p class="favourite-counter js-cart-container"></p>
-                </a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navigation Bar -->
+            <div id="settlingAssistance" class="exploreOurPackages">
+                <h3>Get Settled in Kigali</h3>
+                <p>From Setting up your Bank Account, Sim-Card, Visa Application or a Guided City Tour.  WiyoRent has you covered. Discover our tailored packages</p>
     
-
-    <!-- Main-Page -->
-
-
-    <main>
-        <div class="main-page" >
-            <div class="welcome-page">
-                <div class="background"></div>
-                <div class="foreground"></div>
-                <div class="content">
-                    <h1 class="animate__animated animate__fadeInUp">Welcome to WiyoRent</h1> <br>
-                    <p class="animate__animated animate__fadeInUp animate__delay-1s entry-message">Your Home Away From Home.</p>
-                </div>
-            </div>
-    
-            <div class="brandAmbassador">
-                <div class="BAimg">
-                    <img src="/logo image/BA.jpg" alt="">
-                </div>
-                <div class="animate__animated animate__slideInRight animate__delay-2s  BAmessage">
-                    <p>Join our growing community of international students. We'll guide you through every step of the process, from finding the perfect location to securing a lease. Let WiyoRent take the housing hassle out of your Kigali experience.</p>
-                </div>
-            </div>
-           
-    
-    
-                <div id="featured-section" class="featured-section">
-                    <div class="featured-intro">
-                        <h1>Featured Listings</h1>
-                        <p>Highlighted Listings</p>
-                    </div>
-    
-                    <div class="featured_container">
-                        <div class="featured_house_grid">
+                <div class="packagesGrid">
+                    <div class="serviceCard">
+                        <h3>Standard Package</h3>
+                        <p>25,000 RWF</p>
+                        <div class="packageInfo">
+                            <ul>
+                                <li>Airport Pickup</li>
+                                
+                            </ul>
                         </div>
+
+                        <a href="https://wa.me/250794089835" target="_blank" rel="noopener noreferrer">
+                            <button class="serviceCardButton">Contact Us</button>
+                        </a>
+                        
+                    </div>
+                    <div class="serviceCard">
+                        <h3>Premium Package</h3>
+                        <p>45,000 RWF</p>
+                        <div class="packageInfo">
+                            <ul>
+                                <li>
+                                    Airport Pickup
+                                </li>
+                                <li>
+                                    Bank Account Setup
+                                </li>
+                                <li>
+                                    Sim-Card Setup
+                                </li>
+                            </ul>
+                            
+                        </div>
+
+                        <a href="https://wa.me/250794089835" target="_blank" rel="noopener noreferrer">
+                            <button class="serviceCardButton">Contact Us</button>
+                        </a>
+
+                    </div>
+                    <div class="serviceCard">
+                        <h3>Gold Package</h3>
+                        <p>70,000 RWF</p>
+
+                        <div class="packageInfo">
+                            <ul>
+                                <li>
+                                    Airport Pickup
+                                </li>
+                                <li>
+                                    Bank Account Setup
+                                </li>
+                                <li>
+                                    Sim-Card Setup
+                                </li>
+                                <li>
+                                    Visa-Application Assistance (Application cost included)
+                                </li>
+                                <li>
+                                    Guided City Tour (Essential Locations)
+                                </li>
+                            </ul>
+
+                        </div>
+                        <a href="https://wa.me/250794089835" target="_blank" rel="noopener noreferrer">
+                            <button class="serviceCardButton">Contact Us</button>
+                        </a>
                     </div>
                 </div>
-    
-                <div class="home-section">
-    
-                    <div id="home-section"  class="pageIntro">
-                        <h1>All Listings</h1>
-                        <p>Find Your Desired Student Accomodation</p>
+            </div>
+            <div class="customerFeedBackSection">
+                <h3>What do some of our clients have to say?</h3>
+                <div class="customerFeedBackGrid">
+                    <div class="customerFeedCard">
+                        <p class="customerName">Ibrahim Maâzou  🇳🇪
+                        </p>
+                        <p >"Wiyorent offers adequate services for its customers, especially for new students who may feel out of place at first sight. Everyone will be able to find something to suit their budget."</p>
                     </div>
-    
-                    <div class="filter-container">
-                        <form class="filter-container1" id="filter-form">
-                            <div>
-                                <label for="bedrooms">Bedrooms:</label>
-                                <select id="bedrooms" name="bedrooms">
-                                    <option value="">All</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3+</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="bathrooms">Bathrooms:</label>
-                                <select id="bathrooms" name="bathrooms">
-                                    <option value="">All</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3+</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label  for="Distance">Distance:</label>
-                                <select  id="Distance" name="Distance">
-                                    <option value="">All</option>
-                                    <option value="5-10">5min - 10min</option>
-                                    <option value="10-20">10min - 20min</option>
-                                    <option value="20-30">20min - 30min</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="Price">Price:</label>
-                                <select id="Price" name="Price">
-                                    <option value="">All</option>
-                                    <option value="150000-200000">RWF 150,000 - 200,000</option>
-                                    <option value="200000-250000">RWF 200,000 - 250,000</option>
-                                    <option value="250000+">RWF 250,000 +</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="Status">Available:</label>
-                                <select id="Status" name="Status">
-                                    <option value="">All</option>
-                                    <option value="Available">Available</option>
-                                    <option value="Booked">Booked</option>
-                                </select>
-                            </div>
-                            <button class="search-button">Search</button>
-                        </form>
-                    </div>              
+
+                    <div class="customerFeedCard">
+                        <p class="customerName">Peter UDOCHUKWU 🇳🇬
+                        </p>
+                        <p >"The agency was fantastic in helping me find the perfect rental accommodation! They offered a range of options within my budget and were responsive and professional throughout the process. The staff was friendly, knowledgeable, and genuinely cared about ensuring I was satisfied. They made the entire experience stress-free, and I’d highly recommend them to any student looking for housing."</p>
+                    </div>
+
+                    <div class="customerFeedCard">
+                        <p class="customerName">Goodluck OGBONNA 🇳🇬
+                        </p>
+                        <p>"Wiyorent is a trusted and dependable agency. One thing I like about its services is the variety they offer, ranging from affordable housing for students to options for tourists."</p>
+                    </div>
+
+                    <div class="customerFeedCard">
+                        <p class="customerName">Ange Carla 🇧🇫</p>
+                        <p >"I was pleasantly surprised already by your availability and the speed with which you found this apartment and explained all the required conditions. I also appreciated the airport service and the patience you particularly showed when I had the problem with my luggage (personally I would have lost my temper... Since you arrived before the plane and had to wait another two hours). I like the apartment and the fact that it is close to my university. Also I would like to point out that Winston is really very kind, he took good care of me. The proof is that I was able to take a tour of the city by myself today. As for the prices I found them quite affordable. So far I am enjoying my stay here. Keep going guys☺"</p>
+                    </div>
                     
-                    <div class="container-grid js-container-grid">
-                    </div> 
-                </div>     
+                </div>
+            </div>
         </div>
+        
     </main>
-    
+
     <footer>
-        <div class="buttom-page-section">
+        <div id="ContactNav" class="buttom-page-section">
             <div class="container1">
                 <div id="about-us" class="about-us">
                     <div class="about-us-title">
-                        About Us
+                        Contact us now for our services
                     </div>
                     <div class="about-us-message">
-                        WiyoRent is your go-to solution for affordable student accommodation in Kigali, Rwanda. Specializing in serving international students, our dedicated team ensures a seamless experience in finding the perfect home that fits your budget and lifestyle. Discover stress-free, affordable housing options with WiyoRent today!
+                        Specializing in serving international students, our dedicated team ensures a seamless experience in finding the perfect home that fits your budget and lifestyle. From setting up your bank account and SIM card to assisting with visa applications and offering guided city tours, WiyoRent has you covered. Discover our tailored packages and enjoy stress-free, affordable housing options with WiyoRent today!
                     </div>
                 </div>
 
                 <div class="about-us-information">
-                    <div class="meet-the-team">
-                        Meet The Team
-                    </div>
-
                     <div class="icon-img">
                         <a href="https://www.instagram.com/wiyorent?igsh=emN5Z28yb3UwZ3U3&utm_source=qr" target="_blank">
                             <img src="/icons/instagram.png" alt="WiyoRent Instagram Page">
@@ -233,12 +277,7 @@
             </div>
         </div>
     </footer>
-
+    
 </body>
-    <script src="welcome-page-css/animation.js"></script>
-    <script src="Javasciript/imageSlider.js"></script>
-    <script src="Javasciript/featured_listing_image-slider.js"></script>
-
-    <script type="module" src="/script/featured_listing.js"></script>
-    <script type="module" src="/script/main.js"></script>
+<script src="/welcome-page-css/animation.js"></script>
 </html>
