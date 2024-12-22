@@ -48,7 +48,8 @@
     width: fit-content;
     position: absolute;
     bottom: 5%;
-    right: 17%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .agency .serviceCard .packagesInfo{
@@ -133,7 +134,8 @@
     width: fit-content;
     position: absolute;
     bottom: 5%;
-    right: 37%;
+    left: 50%;
+    transform: translateX(-50%);
     border: 2px solid #fdbf04;
     background-color: transparent;
     color: white;
