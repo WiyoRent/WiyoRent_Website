@@ -24,7 +24,7 @@ export const featured_houses = [
                             house_name: '1-Bedroom House For Rent In Masoro',
                             house_price: 300000,
                             house_commission: 55000,
-                            status: 'Available',
+                            status: 'Booked',
                             bedrooms:1,
                             bathrooms:1,
                             distance:10,
