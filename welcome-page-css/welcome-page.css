@@ -311,6 +311,7 @@ input:focus {
     text-align: center;
     color: #ffffff;
     position: relative;
+    margin-left: -150px;
 }
 
 .BAmessage p {
