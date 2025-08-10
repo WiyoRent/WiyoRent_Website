@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" >
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WiyoRent | Your Student Guide in Kigali</title>
     <meta name="description" content="WiyoRent is a student-led platform in Kigali, Rwanda, dedicated to helping students find affordable housing and settle in seamlessly. Beyond tailored accommodation, we offer essential services like airport pickup, bank account setup, SIM card registration, visa application assistance, and guided city tours. Simplify your move to Kigali with WiyoRent—your trusted partner for a comfortable and convenient student experience. Join us today!">
-
 
     <script type="application/ld+json">
         {
@@ -36,29 +35,1027 @@
         }
     </script>
 
-    <link rel="shortcut icon" type="x-icon" href="/logo image/WiyoRent logo.jpg">
-    <link rel="stylesheet" href="landpage.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <link rel="stylesheet" href="/CSS/mainPageStyling/generalStyling.css">
-    <link rel="stylesheet" href="/welcome-page-css/welcome-page.css">
-    <link rel="stylesheet" href="/CSS/mainPageStyling/navPage.css">
-    <link rel="stylesheet" href="/CSS/mainPageStyling/mainLandingPage.css">
-    <link rel="stylesheet" href="/CSS/mainPageStyling/aboutUs.css">
-    <link rel="stylesheet" href="/CSS/mainPageStyling/packages.css">
-    <link rel="stylesheet" href="/CSS/mainPageStyling/customerFeedBack.css">
-    <link rel="stylesheet" href="/CSS/about-us.css">
+        :root {
+            --primary-yellow: #edb508;
+            --primary-dark: #1a1a1a;
+            --text-light: #666;
+            --white: #ffffff;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --shadow-hover: rgba(0, 0, 0, 0.2);
+            --gradient-overlay: linear-gradient(135deg, rgba(237, 181, 8, 0.1) 0%, rgba(26, 26, 26, 0.3) 100%);
+        }
 
+        body {
+            margin: 0;
+            height: 100%;
+            font-family: 'Inter', 'Oswald', sans-serif;
+            padding: 0px;
+            overflow-x: hidden;
+            overflow-y: visible;
+            width: 100%;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        html, body {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Styles */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(237, 181, 8, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav.scrolled {
+            background: rgba(26, 26, 26, 0.98);
+            border-bottom: 1px solid rgba(237, 181, 8, 0.5);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .leftNav .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            letter-spacing: -0.5px;
+        }
+
+        .leftNav .logo:hover {
+            color: var(--primary-yellow);
+            transform: scale(1.05);
+        }
+
+        .leftNav .logo .brand-accent {
+            color: var(--primary-yellow);
+        }
+
+        .mainNav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .mainNav li a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .mainNav li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-yellow);
+            transition: width 0.3s ease;
+        }
+
+        .mainNav li a:hover {
+            color: var(--primary-yellow);
+        }
+
+        .mainNav li a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .landingPage {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://rcb.rw/IMG/logo/arton11.jpg?1586601110);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -2;
+        }
+
+        .foreground {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://www.kcc.rw/uploads/9/8/2/4/98249186/illume_orig.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            mask-image: linear-gradient(var(--direction), rgba(0,0,0,1) 40%, rgba(0,0,0,0) 60%);
+            mask-position: 10% 10%;
+            z-index: -1;
+        }
+
+        .landingPage h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            text-shadow: 5px 5px black;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: -0.02em;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Enhanced Button Styles - Fixed visibility issues */
+        .landingPageButtons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.3s forwards;
+            position: relative;
+            z-index: 1;
+        }
+
+        .landingPageButtons button {
+            position: relative;
+            padding: 0;
+            border: none;
+            background: none;
+            cursor: pointer;
+            outline: none;
+            font-family: inherit;
+            overflow: hidden;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .landingPageButtons button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(237, 181, 8, 0.3);
+        }
+
+        .landingPageButtons button:active {
+            transform: translateY(0);
+        }
+
+        .landingPageButtons button a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        /* Primary Button (First button) */
+        .landingPageButtons button:first-child a {
+            background: var(--primary-yellow);
+            color: var(--primary-dark);
+            border: 2px solid var(--primary-yellow);
+            box-shadow: 0 4px 15px rgba(237, 181, 8, 0.2);
+        }
+
+        .landingPageButtons button:first-child::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .landingPageButtons button:first-child:hover::before {
+            left: 100%;
+        }
+
+        .landingPageButtons button:first-child:hover a {
+            background: #d4a007;
+            transform: scale(1.02);
+        }
+
+        /* Secondary Button (Second button) - FIXED for better visibility */
+        .landingPageButtons button:last-child a {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(15px);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .landingPageButtons button:last-child::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--white);
+            transition: width 0.3s ease;
+            z-index: 1;
+        }
+
+        .landingPageButtons button:last-child:hover::before {
+            width: 100%;
+        }
+
+        .landingPageButtons button:last-child:hover a {
+            color: var(--primary-dark);
+            text-shadow: none;
+            z-index: 2;
+            background: transparent;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* About Us Section */
+        .aboutUs {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .heading::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-yellow);
+            border-radius: 2px;
+        }
+
+        .companyIntro {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px var(--shadow);
+            margin-bottom: 4rem;
+            border-left: 4px solid var(--primary-yellow);
+        }
+
+        .companyIntro h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .companyIntro p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Mission & Vision Section - NEW DESIGN */
+        .missionVisionSection {
+            margin-bottom: 4rem;
+        }
+
+        .missionVisionGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .missionCard, .visionCard {
+            background: var(--white);
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .missionCard::before, .visionCard::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-yellow), #f4d03f);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .missionCard:hover, .visionCard:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .missionCard:hover::before, .visionCard:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cardIcon {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .iconCircle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .mission-icon {
+            background: linear-gradient(135deg, #edb508 0%, #f4d03f 100%);
+            box-shadow: 0 8px 20px rgba(237, 181, 8, 0.3);
+        }
+
+        .vision-icon {
+            background: linear-gradient(135deg, #4a90e2 0%, #7bb3f0 100%);
+            box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+        }
+
+        .missionCard:hover .iconCircle, .visionCard:hover .iconCircle {
+            transform: scale(1.1) rotateY(180deg);
+        }
+
+        .missionCard h4, .visionCard h4 {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .missionCard p, .visionCard p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* Achievements Section */
+        .achievements h3 {
+            color: var(--primary-dark);
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        .achievementGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .achievementCard {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--primary-yellow);
+        }
+
+        .achievementCard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px var(--shadow-hover);
+        }
+
+        .achievementCard p:first-child {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .achievementCard span {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .achievementCardImg {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievementCardImg img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        /* Our Services Section */
+        .ourServices {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .agency {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .agency h3 {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .agency p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .serviceCard {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px var(--shadow);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            margin: 0 auto 2rem auto;
+            max-width: 400px;
+        }
+
+        .serviceCard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px var(--shadow-hover);
+            border-color: var(--primary-yellow);
+        }
+
+        .serviceCard.featured {
+            border-color: var(--primary-yellow);
+            transform: scale(1.05);
+        }
+
+        .serviceCard.featured:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        .popularBadge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-yellow);
+            color: var(--primary-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .serviceCard h3 {
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .serviceCard .price {
+            color: var(--primary-yellow);
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .packagesInfo ul, .packageInfo ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .packagesInfo li, .packageInfo li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            padding-left: 2rem;
+            color: var(--text-light);
+        }
+
+        .packagesInfo li:before, .packageInfo li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-yellow);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .packagesInfo li:last-child, .packageInfo li:last-child {
+            border-bottom: none;
+        }
+
+        .serviceCardButton {
+            background: var(--primary-yellow);
+            color: var(--primary-dark);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+
+        .serviceCardButton:hover {
+            background: #d4a007;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(237, 181, 8, 0.3);
+        }
+
+        .exploreOurPackages {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .exploreOurPackages h3 {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .exploreOurPackages p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        .packagesGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Customer Feedback Section */
+        .customerFeedBackSection {
+            margin-top: 6rem;
+            text-align: center;
+        }
+
+        .customerFeedBackSection h3 {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .customerFeedBackSection h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-yellow);
+            border-radius: 2px;
+        }
+
+        .customerFeedBackGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .customerFeedCard {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px var(--shadow);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-yellow);
+            text-align: left;
+        }
+
+        .customerFeedCard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px var(--shadow-hover);
+        }
+
+        .customerName {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .customerFeedCard p:last-child {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* Footer Styles */
+        .buttom-page-section {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #2c2c2c 100%);
+            color: var(--white);
+            padding: 4rem 2rem 2rem 2rem;
+        }
+
+        .container1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-us-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary-yellow);
+        }
+
+        .about-us-message {
+            line-height: 1.7;
+            color: #e0e0e0;
+            font-size: 1.1rem;
+        }
+
+        .about-us-information {
+            text-align: center;
+        }
+
+        .icon-img {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .icon-img a {
+            transition: transform 0.3s ease;
+        }
+
+        .icon-img a:hover {
+            transform: translateY(-3px);
+        }
+
+        .icon-img img {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .icon-img img:hover {
+            box-shadow: 0 5px 15px rgba(237, 181, 8, 0.3);
+        }
+
+        .email {
+            margin-bottom: 0.5rem;
+            color: #e0e0e0;
+        }
+
+        /* Enhanced Mobile Responsiveness */
+        @media (max-width: 768px) {
+            nav ul {
+                padding: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .mainNav {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .landingPage {
+                padding: 2rem 1rem;
+            }
+
+            .landingPageButtons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                width: 100%;
+                padding: 0 1rem;
+            }
+
+            .landingPageButtons button {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .landingPageButtons button a {
+                padding: 1.2rem 1.5rem;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+
+            .companyIntro {
+                padding: 2rem;
+                margin: 0 1rem 3rem 1rem;
+            }
+
+            .achievementGrid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .achievementCard {
+                padding: 2rem;
+            }
+
+            .ourServices {
+                padding: 4rem 1rem;
+            }
+
+            .packagesGrid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .serviceCard {
+                margin: 0 0 2rem 0;
+                max-width: none;
+            }
+
+            .serviceCard.featured {
+                transform: none;
+            }
+
+            .serviceCard.featured:hover {
+                transform: translateY(-5px);
+            }
+
+            .customerFeedBackGrid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .customerFeedCard {
+                padding: 1.5rem;
+            }
+
+            .container1 {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .about-us-title {
+                font-size: 1.5rem;
+            }
+
+            .icon-img {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .missionVisionGrid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .missionCard, .visionCard {
+                padding: 2rem 1.5rem;
+            }
+
+            .iconCircle {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .missionCard h4, .visionCard h4 {
+                font-size: 1.5rem;
+            }
+
+            .missionCard p, .visionCard p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                padding: 0.5rem;
+            }
+
+            .leftNav .logo {
+                font-size: 1.5rem;
+            }
+
+            .mainNav li a {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+
+            .landingPage h1 {
+                font-size: 2rem;
+                padding: 0 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .landingPageButtons {
+                margin-top: 1.5rem;
+                padding: 0 0.5rem;
+            }
+
+            .landingPageButtons button a {
+                padding: 1rem;
+                font-size: 0.95rem;
+            }
+
+            .companyIntro {
+                padding: 1.5rem;
+                margin: 0 0.5rem 3rem 0.5rem;
+            }
+
+            .aboutUs {
+                padding: 4rem 1rem;
+            }
+
+            .heading {
+                font-size: 2rem;
+            }
+
+            .missionVisionGrid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .missionCard, .visionCard {
+                padding: 1.5rem;
+            }
+
+            .cardIcon {
+                margin-bottom: 1.5rem;
+            }
+
+            .iconCircle {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .missionCard h4, .visionCard h4 {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+
+            .missionCard p, .visionCard p {
+                font-size: 0.95rem;
+            }
+
+            .agency h3, .exploreOurPackages h3, .customerFeedBackSection h3 {
+                font-size: 1.5rem;
+            }
+
+            .serviceCard {
+                padding: 1.5rem;
+                margin: 0 0.5rem 2rem 0.5rem;
+            }
+
+            .serviceCard .price {
+                font-size: 1.5rem;
+            }
+
+            .customerFeedCard {
+                padding: 1.5rem;
+                margin: 0 0.5rem;
+            }
+
+            .buttom-page-section {
+                padding: 3rem 1rem 2rem 1rem;
+            }
+
+            .about-us-title {
+                font-size: 1.3rem;
+            }
+
+            .about-us-message {
+                font-size: 1rem;
+            }
+
+            .landingPage {
+                height: 80vh;
+                min-height: 600px;
+            }
+
+            /* Improve button contrast on mobile */
+            .landingPageButtons button:last-child a {
+                background: rgba(255, 255, 255, 0.25);
+                border: 2px solid rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(20px);
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 360px) {
+            .landingPageButtons button a {
+                padding: 0.875rem;
+                font-size: 0.9rem;
+            }
+
+            .serviceCard {
+                margin: 0 0 2rem 0;
+                padding: 1.25rem;
+            }
+
+            .customerFeedCard {
+                margin: 0 0 1.5rem 0;
+                padding: 1.25rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
         <ul>
             <div class="leftNav">
-                <li class="logo">
-                    <a href="./index.html">
-                        <img src="/logo image/WiyoRent logo.jpg" alt="Wiyorent Logo">
+                <li>
+                    <a href="./index.html" class="logo">
+                        Wiyo<span class="brand-accent">Rent</span>
                     </a>
-                 
                 </li>
             </div>
             <div class="mainNav">
@@ -69,18 +1066,17 @@
         </ul>
     </nav>
 
+    <!-- Hero -->
     <div class="landingPage">
         <div class="background"></div>
         <div class="foreground"></div>
         <h1>Welcome to WiyoRent</h1>
         <div class="landingPageButtons">
-            
-                <button>
-                    <a href="wiyorent.html"> 
-                        Explore Student Accomodations
-                    </a>
-                </button>
-        
+            <button>
+                <a href="wiyorent.html"> 
+                    Explore Student Accommodations
+                </a>
+            </button>
             <button>
                 <a href="#settlingAssistance">
                     Get Settled in Kigali
@@ -88,6 +1084,7 @@
             </button>
         </div>
     </div>
+    <!-- Hero End -->
     
     <main>
         <div id="AboutUsNav" class="aboutUs">
@@ -96,46 +1093,48 @@
                 <h3 style="text-align: center; padding-bottom: 10px;">Who are we</h3>
                 <p>We are a startup focused on simplifying the search for student-specific accommodations in Kigali. In addition to housing, we offer essential services to help students settle in, including airport pickups, bank account setup, SIM card assistance, and visa application support. Our goal is to ensure a smooth and enjoyable transition for students in their new environment.</p>
             </div>
-            <div class="tabSection">
-                <input type="radio" id="experience" name="Checked" checked="checked">
-                <label for="experience">Our Mission</label>
-                <div class="tabContent">
-                    <h4>What drives us here at WiyoRent.</h4>
-                    <p>To revolutionize the African real estate industry by harnessing technology to address the changing market demands, with a specific emphasis on delivering innovative student housing solutions and streamlining the process for students seeking accommodation.</p>
-                </div>
-
-                <input type="radio" id="education" name="Checked">
-                <label for="education">Our Vision</label>
-                <div class="tabContent">
-                    <h4>Our Future Aspirations.</h4>
-                    <p>
-                        We aspire to shape the future of African Real Estate, providing cutting-edge student housing that meets the evolving needs of the modern student and be the go-to African leader in faciliating student housing search in Africa.
-                    </p>
+            <!-- Mission & Vision Cards -->
+            <div class="missionVisionSection">
+                <div class="missionVisionGrid">
+                    <div class="missionCard">
+                        <div class="cardIcon">
+                            <div class="iconCircle mission-icon">
+                                <span>🎯</span>
+                            </div>
+                        </div>
+                        <h4>Our Mission</h4>
+                        <p>To revolutionize the African real estate industry by harnessing technology to address the changing market demands, with a specific emphasis on delivering innovative student housing solutions and streamlining the process for students seeking accommodation.</p>
+                    </div>
+                    
+                    <div class="visionCard">
+                        <div class="cardIcon">
+                            <div class="iconCircle vision-icon">
+                                <span>🚀</span>
+                            </div>
+                        </div>
+                        <h4>Our Vision</h4>
+                        <p>We aspire to shape the future of African Real Estate, providing cutting-edge student housing that meets the evolving needs of the modern student and be the go-to African leader in facilitating student housing search in Africa.</p>
+                    </div>
                 </div>
             </div>
             <div class="achievements">
                 <h3 style="text-align: center;">So, what have we achieved so far?</h3>
                 <div class="achievementGrid">
                     <div class="achievementCard">
-                        <p>50 <span>+</span></p>
-                        <p>The number of <span>
-                            students
-                        </span> we have proudly served in less than <span> five months</span> of operating.</p>
+                        <p>150 <span>+</span></p>
+                        <p>The number of <span>students</span> we have proudly served in less than <span>five months</span> of operating.</p>
                     </div>
                     <div class="achievementCard">
                         <p>15 <span>+</span></p>
-                        <p>The number of <span>
-                            landlords
-                        </span> whose properties we have successfully leased.</p>
+                        <p>The number of <span>landlords</span> whose properties we have successfully leased.</p>
                     </div>
                     <div class="achievementCard">
                         <div class="achievementCardImg">
-                            <img src="/icons/cmu_logo.png" alt="CarnegieMellon University Logo">
-                            <img src="https://static.wixstatic.com/media/e77540_03cdbded28ff4127b8a12ac4a75521ef~mv2.png/v1/fill/w_380,h_380,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ALU%20Small.png" alt="African Leadership Logo">
+                            <img src="/icons/cmu_logo.png" alt="Carnegie Mellon University Logo">
+                            <img src="https://static.wixstatic.com/media/e77540_03cdbded28ff4127b8a12ac4a75521ef~mv2.png/v1/fill/w_380,h_380,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ALU%20Small.png" alt="African Leadership University Logo">
                         </div>
                        
-                        <p>Successfully provided our service to students from both <span>African Leadership University</span> and <span>
-                            Carnegie Mellon University Africa</span></p>
+                        <p>Successfully provided our service to students from both <span>African Leadership University</span> and <span>Carnegie Mellon University Africa</span></p>
                     </div>
                 </div>
             </div>
@@ -143,90 +1142,68 @@
         <div id="OurServicesNav" class="ourServices">
             <h2 class="heading">OUR SERVICES</h2>
             <div class="agency">
-                <h3>Find Your Student Accomodation</h3>
-                    <p>Because Finding a comfortable house is as important as your studies</p>
+                <h3>Find Your Student Accommodation</h3>
+                <p>Because Finding a comfortable house is as important as your studies</p>
                 <div class="serviceCard">
                     <div class="packagesInfo">
                         <ul>
                             <li>No visiting Fees</li>
-                            <li>Transperency on all listings</li>
+                            <li>Transparency on all listings</li>
                             <li>Friendly Agency Fee</li>
-
                         </ul>
                     </div>
                     
                     <a href="wiyorent.html">
-                        <button class="serviceCardButton">Explore Student Accomodations</button>
+                        <button class="serviceCardButton">Explore Student Accommodations</button>
                     </a>
                 </div>
-                
             </div>
             <div id="settlingAssistance" class="exploreOurPackages">
                 <h3>Get Settled in Kigali</h3>
-                <p>From Setting up your Bank Account, Sim-Card, Visa Application or a Guided City Tour.  WiyoRent has you covered. Discover our tailored packages</p>
+                <p>From Setting up your Bank Account, Sim-Card, Visa Application or a Guided City Tour. WiyoRent has you covered. Discover our tailored packages</p>
     
                 <div class="packagesGrid">
                     <div class="serviceCard">
                         <h3>Standard Package</h3>
-                        <p>25,000 RWF</p>
+                        <p class="price">25,000 RWF</p>
                         <div class="packageInfo">
                             <ul>
                                 <li>Airport Pickup</li>
-                                
                             </ul>
                         </div>
 
                         <a href="https://wa.me/250794089835" target="_blank" rel="noopener noreferrer">
                             <button class="serviceCardButton">Contact Us</button>
                         </a>
-                        
                     </div>
-                    <div class="serviceCard">
+                    <div class="serviceCard featured">
+                        <div class="popularBadge">Most Popular</div>
                         <h3>Premium Package</h3>
-                        <p>45,000 RWF</p>
+                        <p class="price">45,000 RWF</p>
                         <div class="packageInfo">
                             <ul>
-                                <li>
-                                    Airport Pickup
-                                </li>
-                                <li>
-                                    Bank Account Setup
-                                </li>
-                                <li>
-                                    Sim-Card Setup
-                                </li>
+                                <li>Airport Pickup</li>
+                                <li>Bank Account Setup</li>
+                                <li>Sim-Card Setup</li>
                             </ul>
-                            
                         </div>
 
                         <a href="https://wa.me/250794089835" target="_blank" rel="noopener noreferrer">
                             <button class="serviceCardButton">Contact Us</button>
                         </a>
-
                     </div>
                     <div class="serviceCard">
                         <h3>Gold Package</h3>
-                        <p>70,000 RWF</p>
+                        <p class="price">70,000 RWF</p>
 
                         <div class="packageInfo">
                             <ul>
-                                <li>
-                                    Airport Pickup
-                                </li>
-                                <li>
-                                    Bank Account Setup
-                                </li>
-                                <li>
-                                    Sim-Card Setup
-                                </li>
-                                <li>
-                                    Visa-Application Assistance (Application cost included)
-                                </li>
-                                <li>
-                                    Guided City Tour (Essential Locations)
-                                </li>
+                                <li>Airport Pickup</li>
+                                <li>Bank Account Setup</li>
+                                <li>Sim-Card Setup</li>
+                                <li>Visa-Application Assistance (Application cost included)</li>
+                                <li>Guided City Tour (Essential Locations)</li>
                             </ul>
-
                         </div>
                         <a href="https://wa.me/250794089835" target="_blank" rel="noopener noreferrer">
                             <button class="serviceCardButton">Contact Us</button>
@@ -237,37 +1214,30 @@
             <div class="customerFeedBackSection">
                 <h3>What do some of our clients have to say?</h3>
                 <div class="customerFeedBackGrid">
-
                     <div class="customerFeedCard">
                         <p class="customerName">Ange CARLA 🇧🇫</p>
-                        <p >"I was pleasantly surprised already by your availability and the speed with which you found this apartment and explained all the required conditions. I also appreciated the airport service and the patience you particularly showed when I had the problem with my luggage (personally I would have lost my temper... Since you arrived before the plane and had to wait another two hours). I like the apartment and the fact that it is close to my university. Also I would like to point out that Winston is really very kind, he took good care of me. The proof is that I was able to take a tour of the city by myself today. As for the prices I found them quite affordable. So far I am enjoying my stay here. Keep going guys☺"</p>
+                        <p>"I was pleasantly surprised already by your availability and the speed with which you found this apartment and explained all the required conditions. I also appreciated the airport service and the patience you particularly showed when I had the problem with my luggage (personally I would have lost my temper... Since you arrived before the plane and had to wait another two hours). I like the apartment and the fact that it is close to my university. Also I would like to point out that Winston is really very kind, he took good care of me. The proof is that I was able to take a tour of the city by myself today. As for the prices I found them quite affordable. So far I am enjoying my stay here. Keep going guys☺"</p>
                     </div>
 
                     <div class="customerFeedCard">
-                        <p class="customerName">Peter UDOCHUKWU 🇳🇬
-                        </p>
-                        <p >"The agency was fantastic in helping me find the perfect rental accommodation! They offered a range of options within my budget and were responsive and professional throughout the process. The staff was friendly, knowledgeable, and genuinely cared about ensuring I was satisfied. They made the entire experience stress-free, and I’d highly recommend them to any student looking for housing."</p>
+                        <p class="customerName">Peter UDOCHUKWU 🇳🇬</p>
+                        <p>"The agency was fantastic in helping me find the perfect rental accommodation! They offered a range of options within my budget and were responsive and professional throughout the process. The staff was friendly, knowledgeable, and genuinely cared about ensuring I was satisfied. They made the entire experience stress-free, and I'd highly recommend them to any student looking for housing."</p>
                     </div>
 
                     <div class="customerFeedCard">
-                        <p class="customerName">Sabattinah TOJONIRINA 🇲🇬
-                        </p>
-                        <p>"I had such a great experience from the service provided by WiyoRent. They were so friendly and welcoming. The car was really comfortable with the professional driver. I enjoyed it. Thank you WiyoRent for welcoming me this warmly.
-                            All the best,"</p>
+                        <p class="customerName">Sabattinah TOJONIRINA 🇲🇬</p>
+                        <p>"I had such a great experience from the service provided by WiyoRent. They were so friendly and welcoming. The car was really comfortable with the professional driver. I enjoyed it. Thank you WiyoRent for welcoming me this warmly. All the best,"</p>
                     </div>
 
                     <div class="customerFeedCard">
-                        <p class="customerName">Ibrahim MAAZOU 🇳🇪
-                        </p>
-                        <p >"Wiyorent offers adequate services for its customers, especially for new students who may feel out of place at first sight. Everyone will be able to find something to suit their budget."</p>
+                        <p class="customerName">Ibrahim MAAZOU 🇳🇪</p>
+                        <p>"Wiyorent offers adequate services for its customers, especially for new students who may feel out of place at first sight. Everyone will be able to find something to suit their budget."</p>
                     </div>
 
                     <div class="customerFeedCard">
-                        <p class="customerName">Goodluck OGBONNA 🇳🇬
-                        </p>
-                        <p>"Wiyorent is a trusted and dependable agency. One thing I like about its services is the variety they offer, ranging from affordable housing for students to options for tourists."</p>
+                        <p class="customerName">Goodluck OGBONNA 🇳🇬</p>
+                        <p>"Wiyorent is a trusted and dependable agency. One thing I like about its services is the variety they offer, ranging from affordable housing for students to options for tourists."</p>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -305,7 +1275,6 @@
                         </a>
                     </div>
 
-
                     <div class="email">
                        Email: wiyorent@gmail.com
                     </div>
@@ -316,7 +1285,71 @@
             </div>
         </div>
     </footer>
-    
+
+    <script>
+        // Add the original spinning animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Original spinning animation
+            let c = 45;
+            function draw(){
+                document.documentElement.style.setProperty('--direction', c++ + 'deg');
+                requestAnimationFrame(draw);
+            }
+            requestAnimationFrame(draw);
+
+            // Add scroll effect to navigation
+            window.addEventListener('scroll', function() {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 100) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+
+            // Add button click animations
+            const buttons = document.querySelectorAll('.landingPageButtons button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.cssText = `
+                        position: absolute;
+                        width: ${size}px;
+                        height: ${size}px;
+                        left: ${x}px;
+                        top: ${y}px;
+                        background: rgba(255, 255, 255, 0.3);
+                        border-radius: 50%;
+                        transform: scale(0);
+                        animation: ripple 0.6s linear;
+                        pointer-events: none;
+                    `;
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        });
+
+        // Add CSS for ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
-<script src="/welcome-page-css/animation.js"></script>
 </html>
