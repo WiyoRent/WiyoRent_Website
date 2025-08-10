@@ -1,3 +1,5 @@
+// Main Listing Page
+
 import { addToFavourite } from "../data-structures/add-to-favourite.js";
 import { main_Listings } from "../data-structures/main-listing-data.js";
 import { priceConversion } from "../utils/price-conversion.js";
@@ -81,24 +83,28 @@ function displayListings(listings) {
                         <a href="detailed-listing-page/detailed-listing.html" class="js-detailed-listing" data-house-id="${main_Listing.id}">
                             <h3>${main_Listing.house_overview.house_name}</h3> 
                         </a>
-                        <button class="add-to-favourite js-add-to-favourite-btn" data-house-id="${main_Listing.id}">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z"/></svg>
-                            <div id="tooltip" class="tooltip">Save</div>
-                        </button>
+                        <div class="add-to-favourite-container">
+                            <button class="add-to-favourite js-add-to-favourite-btn" data-house-id="${main_Listing.id}">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z"/></svg>
+                            </button>
+                        </div>
+                        
                     </div>
                     <div class="home-details">
                         <p class="price">RWF ${priceConversion(main_Listing.house_overview.house_price)}/per room</p>
-                        <div class="beds">
-                            <span class="material-symbols-outlined">bed</span>
-                            <p class="amount-of-beds">${main_Listing.house_overview.bedrooms}</p>
-                        </div>
-                        <div class="bathrooms">
-                            <span class="material-symbols-outlined">bathtub</span>
-                            <p class="amount-of-bathrooms">${main_Listing.house_overview.bathrooms}</p>
-                        </div>
-                        <div class="distance">
-                            <span class="material-symbols-outlined">distance</span>
-                            <p class="distance-from-camp">${main_Listing.house_overview.distance}min</p>
+                        <div class="home-details-row">
+                            <div class="beds">
+                                <span class="material-symbols-outlined">bed</span>
+                                <p class="amount-of-beds">${main_Listing.house_overview.bedrooms}</p>
+                            </div>
+                            <div class="bathrooms">
+                                <span class="material-symbols-outlined">bathtub</span>
+                                <p class="amount-of-bathrooms">${main_Listing.house_overview.bathrooms}</p>
+                            </div>
+                            <div class="distance">
+                                <span class="material-symbols-outlined">distance</span>
+                                <p class="distance-from-camp">${main_Listing.house_overview.distance}min</p>
+                            </div>
                         </div>
                     </div>
                 </div>
