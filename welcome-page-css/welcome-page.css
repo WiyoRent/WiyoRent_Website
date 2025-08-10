@@ -307,11 +307,11 @@ input:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 50px;
     text-align: center;
     color: #ffffff;
     position: relative;
-    margin-left: -150px;
+    margin-left: -30px;
 }
 
 .BAmessage p {
