@@ -134,6 +134,7 @@
         .mainNav {
             display: flex;
             gap: 2rem;
+            align-items: center;
         }
 
         .mainNav li a {
@@ -162,6 +163,48 @@
 
         .mainNav li a:hover::after {
             width: 100%;
+        }
+
+        /* Referral Program Button in Nav */
+        .referral-nav-btn {
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, #f4d03f 100%);
+            color: var(--primary-dark);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(237, 181, 8, 0.3);
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .referral-nav-btn::before {
+            content: '🎁';
+            margin-right: 0.5rem;
+        }
+
+        .referral-nav-btn:hover {
+            color: #000000 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(237, 181, 8, 0.4);
+            background: linear-gradient(135deg, #f4d03f 0%, var(--primary-yellow) 100%);
+        }
+
+        .referral-nav-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .referral-nav-btn:hover::after {
+            left: 100%;
         }
 
         /* Hero Section */
@@ -218,7 +261,7 @@
             z-index: 1;
         }
 
-        /* Enhanced Button Styles - Fixed visibility issues */
+        /* Enhanced Button Styles */
         .landingPageButtons {
             display: flex;
             gap: 1.5rem;
@@ -294,7 +337,7 @@
             transform: scale(1.02);
         }
 
-        /* Secondary Button (Second button) - FIXED for better visibility */
+        /* Secondary Button (Second button) */
         .landingPageButtons button:last-child a {
             background: rgba(255, 255, 255, 0.15);
             color: var(--white);
@@ -388,7 +431,7 @@
             line-height: 1.7;
         }
 
-        /* Mission & Vision Section - NEW DESIGN */
+        /* Mission & Vision Section */
         .missionVisionSection {
             margin-bottom: 4rem;
         }
@@ -819,6 +862,11 @@
                 justify-content: center;
             }
 
+            .referral-nav-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
             .landingPage {
                 padding: 2rem 1rem;
             }
@@ -941,6 +989,11 @@
                 padding: 0.5rem;
             }
 
+            .referral-nav-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.85rem;
+            }
+
             .landingPage h1 {
                 font-size: 2rem;
                 padding: 0 1rem;
@@ -1033,7 +1086,6 @@
                 min-height: 600px;
             }
 
-            /* Improve button contrast on mobile */
             .landingPageButtons button:last-child a {
                 background: rgba(255, 255, 255, 0.25);
                 border: 2px solid rgba(255, 255, 255, 0.9);
@@ -1041,7 +1093,6 @@
             }
         }
 
-        /* Extra small screens */
         @media (max-width: 360px) {
             .landingPageButtons button a {
                 padding: 0.875rem;
@@ -1074,6 +1125,11 @@
                 <li><a href="#AboutUsNav">About Us</a></li>
                 <li><a href="#OurServicesNav">Our Services</a></li>
                 <li><a href="#ContactNav">Contact Us</a></li>
+                <li>
+                    <a href="https://wiyorent-student-referral.vercel.app/" target="_blank" rel="noopener noreferrer" class="referral-nav-btn">
+                        Referral Program
+                    </a>
+                </li>
             </div>
         </ul>
     </nav>
@@ -1299,9 +1355,7 @@
     </footer>
 
     <script>
-        // Add the original spinning animation
         document.addEventListener('DOMContentLoaded', function() {
-            // Original spinning animation
             let c = 45;
             function draw(){
                 document.documentElement.style.setProperty('--direction', c++ + 'deg');
@@ -1309,7 +1363,6 @@
             }
             requestAnimationFrame(draw);
 
-            // Add scroll effect to navigation
             window.addEventListener('scroll', function() {
                 const nav = document.querySelector('nav');
                 if (window.scrollY > 100) {
@@ -1319,7 +1372,6 @@
                 }
             });
 
-            // Add button click animations
             const buttons = document.querySelectorAll('.landingPageButtons button');
             buttons.forEach(button => {
                 button.addEventListener('click', function(e) {
@@ -1351,7 +1403,6 @@
             });
         });
 
-        // Add CSS for ripple animation
         const style = document.createElement('style');
         style.textContent = `
             @keyframes ripple {
