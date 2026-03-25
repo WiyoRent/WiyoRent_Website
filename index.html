@@ -1112,6 +1112,705 @@
     </style>
 </head>
 <body>
+
+<!-- ============================================================
+     WIYORENT — COMING SOON OVERLAY
+     Remove this block when the new site is ready to launch.
+     ============================================================ -->
+<div id="coming-soon-overlay">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+    #coming-soon-overlay *,
+    #coming-soon-overlay *::before,
+    #coming-soon-overlay *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html.cs-active, body.cs-active {
+      overflow: hidden !important;
+      height: 100% !important;
+    }
+
+    #coming-soon-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      background-color: #010101;
+      color: #ffffff;
+      font-family: 'DM Sans', sans-serif;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* ── Noise grain overlay ── */
+    #coming-soon-overlay::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.4;
+    }
+
+    /* ── Yellow accent line top ── */
+    #coming-soon-overlay .cs-topline {
+      height: 4px;
+      background: #F1C528;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    #coming-soon-overlay .cs-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    /* ── Logo bar ── */
+    #coming-soon-overlay .cs-logo-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 2rem 0 0;
+    }
+
+    #coming-soon-overlay .cs-logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      overflow: hidden;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+    }
+
+    #coming-soon-overlay .cs-logo-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #coming-soon-overlay .cs-logo-name {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.18em;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    /* ── Hero ── */
+    #coming-soon-overlay .cs-hero {
+      padding: 5rem 0 3rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    #coming-soon-overlay .cs-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #F1C528;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    #coming-soon-overlay .cs-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: #F1C528;
+      flex-shrink: 0;
+    }
+
+    #coming-soon-overlay .cs-headline {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(3rem, 10vw, 7.5rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      color: #F1C528;
+      letter-spacing: -0.01em;
+    }
+
+    #coming-soon-overlay .cs-headline span {
+      display: block;
+      color: #ffffff;
+      font-weight: 300;
+      font-size: clamp(2rem, 6vw, 5rem);
+    }
+
+    #coming-soon-overlay .cs-subline {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      max-width: 520px;
+      line-height: 1.65;
+      padding-top: 0.5rem;
+    }
+
+    /* ── Divider ── */
+    #coming-soon-overlay .cs-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin: 0.5rem 0 2.5rem;
+    }
+
+    /* ── Countdown ── */
+    #coming-soon-overlay .cs-countdown-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    #coming-soon-overlay .cs-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.15rem;
+      min-width: 80px;
+    }
+
+    #coming-soon-overlay .cs-unit-num {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    #coming-soon-overlay .cs-unit-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    #coming-soon-overlay .cs-unit-sep {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem;
+      color: #F1C528;
+      opacity: 0.4;
+      padding-top: 0.1rem;
+      align-self: flex-start;
+      line-height: 1.1;
+    }
+
+    /* ── Launch date pill ── */
+    #coming-soon-overlay .cs-launch-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid rgba(241,197,40,0.3);
+      padding: 0.45rem 0.9rem;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: #F1C528;
+      margin-bottom: 3.5rem;
+    }
+
+    #coming-soon-overlay .cs-launch-pill::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #F1C528;
+      animation: cs-pulse 2s infinite;
+    }
+
+    @keyframes cs-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.7); }
+    }
+
+    /* ── Section labels ── */
+    #coming-soon-overlay .cs-section-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── Features grid ── */
+    #coming-soon-overlay .cs-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 4rem;
+    }
+
+    #coming-soon-overlay .cs-feat {
+      background: #010101;
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: background 0.2s ease;
+      position: relative;
+    }
+
+    #coming-soon-overlay .cs-feat::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 1.8rem;
+      right: 1.8rem;
+      height: 1px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    #coming-soon-overlay .cs-feat:hover {
+      background: #0d0d0d;
+    }
+
+    #coming-soon-overlay .cs-feat-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: rgba(241,197,40,0.1);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    #coming-soon-overlay .cs-feat-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: #F1C528;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #coming-soon-overlay .cs-feat-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    #coming-soon-overlay .cs-feat-desc {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+    }
+
+    /* ── Waitlist ── */
+    #coming-soon-overlay .cs-waitlist-wrap {
+      background: rgba(241,197,40,0.04);
+      border: 1px solid rgba(241,197,40,0.15);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    #coming-soon-overlay .cs-waitlist-title {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    #coming-soon-overlay .cs-waitlist-title em {
+      font-style: normal;
+      color: #F1C528;
+    }
+
+    #coming-soon-overlay .cs-waitlist-sub {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.45);
+      font-weight: 300;
+      line-height: 1.6;
+      max-width: 440px;
+    }
+
+    #coming-soon-overlay .cs-waitlist-form {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    #coming-soon-overlay .cs-waitlist-input {
+      flex: 1;
+      min-width: 220px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: #ffffff;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    #coming-soon-overlay .cs-waitlist-input::placeholder {
+      color: rgba(255,255,255,0.25);
+    }
+
+    #coming-soon-overlay .cs-waitlist-input:focus {
+      border-color: rgba(241,197,40,0.5);
+    }
+
+    #coming-soon-overlay .cs-waitlist-btn {
+      background: #F1C528;
+      color: #010101;
+      border: none;
+      border-radius: 8px;
+      padding: 0.85rem 1.8rem;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      white-space: nowrap;
+    }
+
+    #coming-soon-overlay .cs-waitlist-btn:hover {
+      background: #ffd23f;
+      transform: translateY(-1px);
+    }
+
+    #coming-soon-overlay .cs-waitlist-btn:active {
+      transform: translateY(0);
+    }
+
+    #coming-soon-overlay .cs-waitlist-success {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: #F1C528;
+      font-weight: 500;
+    }
+
+    /* ── Universities ── */
+    #coming-soon-overlay .cs-unis {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 4rem;
+    }
+
+    #coming-soon-overlay .cs-uni-tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.4);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 0.3rem 0.65rem;
+      text-transform: uppercase;
+    }
+
+    /* ── Footer ── */
+    #coming-soon-overlay .cs-footer {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    #coming-soon-overlay .cs-footer-copy {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.04em;
+    }
+
+    #coming-soon-overlay .cs-footer-tags {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ── Fade-in animation on load ── */
+    @keyframes cs-fadein {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    #coming-soon-overlay .cs-inner > * {
+      animation: cs-fadein 0.7s ease both;
+    }
+
+    #coming-soon-overlay .cs-logo-bar   { animation-delay: 0.05s; }
+    #coming-soon-overlay .cs-hero       { animation-delay: 0.15s; }
+    #coming-soon-overlay .cs-divider    { animation-delay: 0.2s; }
+    #coming-soon-overlay .cs-countdown-wrap { animation-delay: 0.25s; }
+    #coming-soon-overlay .cs-launch-pill { animation-delay: 0.3s; }
+    #coming-soon-overlay .cs-features   { animation-delay: 0.35s; }
+    #coming-soon-overlay .cs-waitlist-wrap { animation-delay: 0.4s; }
+    #coming-soon-overlay .cs-unis       { animation-delay: 0.45s; }
+    #coming-soon-overlay .cs-footer     { animation-delay: 0.5s; }
+
+    /* ── Mobile tweaks ── */
+    @media (max-width: 600px) {
+      #coming-soon-overlay .cs-inner { padding: 0 1rem 4rem; }
+      #coming-soon-overlay .cs-features { grid-template-columns: 1fr; }
+      #coming-soon-overlay .cs-waitlist-wrap { padding: 1.75rem; }
+      #coming-soon-overlay .cs-footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+
+  <div class="cs-topline"></div>
+
+  <div class="cs-inner">
+
+    <!-- Logo -->
+    <div class="cs-logo-bar">
+      <div class="cs-logo-mark">
+        <img src="./logo image/WiyoRent logo.jpg" alt="WiyoRent Logo">
+      </div>
+      <span class="cs-logo-name">WiyoRent</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="cs-hero">
+      <p class="cs-eyebrow">Kigali's Student Housing Platform</p>
+      <h1 class="cs-headline">
+        Coming<br>
+        <span>Soon.</span>
+      </h1>
+      <p class="cs-subline">We're rebuilding WiyoRent from the ground up — with powerful new tools to help students in Kigali find the perfect housemate.</p>
+    </div>
+
+    <div class="cs-divider"></div>
+
+    <!-- Countdown -->
+    <div class="cs-countdown-wrap">
+      <div class="cs-unit">
+        <span class="cs-unit-num" id="cs-days">00</span>
+        <span class="cs-unit-label">Days</span>
+      </div>
+      <span class="cs-unit-sep">:</span>
+      <div class="cs-unit">
+        <span class="cs-unit-num" id="cs-hours">00</span>
+        <span class="cs-unit-label">Hours</span>
+      </div>
+      <span class="cs-unit-sep">:</span>
+      <div class="cs-unit">
+        <span class="cs-unit-num" id="cs-mins">00</span>
+        <span class="cs-unit-label">Minutes</span>
+      </div>
+      <span class="cs-unit-sep">:</span>
+      <div class="cs-unit">
+        <span class="cs-unit-num" id="cs-secs">00</span>
+        <span class="cs-unit-label">Seconds</span>
+      </div>
+    </div>
+
+    <!-- Launch pill -->
+    <div class="cs-launch-pill">Launching April 3, 2026</div>
+
+    <!-- Features -->
+    <p class="cs-section-label">What's coming</p>
+    <div class="cs-features">
+
+      <div class="cs-feat">
+        <div class="cs-feat-icon">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        </div>
+        <div class="cs-feat-title">Housemate Matching</div>
+        <div class="cs-feat-desc">Browse verified student profiles and filter by budget, lifestyle, university, and move-in date. No random matches.</div>
+      </div>
+
+      <div class="cs-feat">
+        <div class="cs-feat-icon">
+          <svg viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+        </div>
+        <div class="cs-feat-title">Smart Filters</div>
+        <div class="cs-feat-desc">Combine filters that actually matter — budget, neighbourhood, sleep schedule, cleanliness, pets, smoking, and urgency level.</div>
+      </div>
+
+      <div class="cs-feat">
+        <div class="cs-feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="cs-feat-title">Manual Verification</div>
+        <div class="cs-feat-desc">Every profile is reviewed by a real member of our team before it goes live. No bots, no fake accounts — students only.</div>
+      </div>
+
+      <div class="cs-feat">
+        <div class="cs-feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="cs-feat-title">List Your House</div>
+        <div class="cs-feat-desc">Already have a room? Upload photos, set monthly rent and caution fee, and let compatible housemates find you directly.</div>
+      </div>
+
+      <div class="cs-feat">
+        <div class="cs-feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+        <div class="cs-feat-title">Waitlist Notifications</div>
+        <div class="cs-feat-desc">Get automatic email alerts the moment a new listing matches your preferences — budget, neighbourhood, and more.</div>
+      </div>
+
+      <div class="cs-feat">
+        <div class="cs-feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="cs-feat-title">Student Profiles</div>
+        <div class="cs-feat-desc">Full profiles with lifestyle preferences, verification documents, contact preferences, and house availability status.</div>
+      </div>
+
+    </div>
+
+    <!-- Waitlist -->
+    <div class="cs-waitlist-wrap">
+      <div class="cs-waitlist-title">Be the first to know when we <em>launch.</em></div>
+      <div class="cs-waitlist-sub">Join the waitlist and get notified on April 3rd — the day WiyoRent goes live with the new platform.</div>
+      <form class="cs-waitlist-form" id="cs-waitlist-form" onsubmit="csHandleWaitlist(event)">
+        <input
+          class="cs-waitlist-input"
+          type="email"
+          id="cs-email-input"
+          placeholder="Your student email address"
+          required
+          autocomplete="email"
+        />
+        <button type="submit" class="cs-waitlist-btn">Join Waitlist</button>
+      </form>
+      <div class="cs-waitlist-success" id="cs-success-msg">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F1C528" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        You're on the list! We'll email you on launch day.
+      </div>
+    </div>
+
+    <!-- Universities -->
+    <p class="cs-section-label">Serving students from</p>
+    <div class="cs-unis">
+      <span class="cs-uni-tag">CMU-Africa</span>
+      <span class="cs-uni-tag">ALU</span>
+      <span class="cs-uni-tag">University of Rwanda</span>
+      <span class="cs-uni-tag">INES-Ruhengeri</span>
+      <span class="cs-uni-tag">RP</span>
+      <span class="cs-uni-tag">& more</span>
+    </div>
+
+    <!-- Footer -->
+    <div class="cs-footer">
+      <span class="cs-footer-copy">© 2026 WiyoRent Ltd. All rights reserved.</span>
+      <span class="cs-footer-tags">Kigali, Rwanda &nbsp;·&nbsp; Students Only &nbsp;·&nbsp; No Agency Fees</span>
+    </div>
+
+  </div><!-- /cs-inner -->
+
+  <script>
+    // Lock body scroll while overlay is visible
+    document.documentElement.classList.add('cs-active');
+    document.body.classList.add('cs-active');
+
+    (function () {
+      var launch = new Date('2026-04-03T00:00:00+02:00').getTime();
+
+      function pad(n) { return String(n).padStart(2, '0'); }
+
+      function tick() {
+        var now  = Date.now();
+        var diff = launch - now;
+
+        if (diff <= 0) {
+          document.getElementById('cs-days').textContent  = '00';
+          document.getElementById('cs-hours').textContent = '00';
+          document.getElementById('cs-mins').textContent  = '00';
+          document.getElementById('cs-secs').textContent  = '00';
+          return;
+        }
+
+        var days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        var secs  = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('cs-days').textContent  = pad(days);
+        document.getElementById('cs-hours').textContent = pad(hours);
+        document.getElementById('cs-mins').textContent  = pad(mins);
+        document.getElementById('cs-secs').textContent  = pad(secs);
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    async function csHandleWaitlist(e) {
+      e.preventDefault();
+      var email = document.getElementById('cs-email-input').value.trim();
+      if (!email) return;
+
+      var btn = e.target.querySelector('.cs-waitlist-btn');
+      btn.textContent = 'Joining...';
+      btn.disabled = true;
+
+      var SUPABASE_URL = 'https://ysxottazfhadrpzwaqmd.supabase.co';
+      var ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlzeG90dGF6ZmhhZHJwendhcW1kIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0NjM3NTYsImV4cCI6MjA5MDAzOTc1Nn0.tbhGhPAY4hzy-XPz6M9UzRB4Y--Hxru5r-x78IWnoBc';
+
+      var res = await fetch(SUPABASE_URL + '/rest/v1/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': ANON_KEY,
+          'Authorization': 'Bearer ' + ANON_KEY,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email: email })
+      });
+
+      if (res.ok || res.status === 409) { // 409 = duplicate email, still show success
+        document.getElementById('cs-waitlist-form').style.display = 'none';
+        document.getElementById('cs-success-msg').style.display = 'flex';
+      } else {
+        btn.textContent = 'Try Again';
+        btn.disabled = false;
+      }
+    }
+  </script>
+
+</div>
+<!-- ============================================================
+     END COMING SOON OVERLAY
+     ============================================================ -->
+
     <nav>
         <ul>
             <div class="leftNav">
